@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+<channel>
+  <title>Strawberry</title>
+  <link>http://www.strawberrymusicplayer.org/</link>
+  <description>Strawberry Music Player</description>
+  <language>en</language>
+
+  <item>
+    <title>Strawberry 0.9.2</title>
+    <sparkle:releaseNotesLink>
+      https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/0.9.2/Changelog
+    </sparkle:releaseNotesLink>
+    <enclosure url="https://github.com/strawberrymusicplayer/strawberry/releases/download/0.9.2/StrawberrySetup-0.9.2-Qt6-x64.exe" sparkle:version="0.9.2" />
+  </item>
+
+</channel>
+</rss>

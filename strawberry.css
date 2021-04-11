@@ -1,0 +1,150 @@
+.clr {
+    clear: both;
+}
+
+#container {
+    border: 0px;
+    width: 90%;
+    margin: 5px 5px 10px 10px;
+    padding: 0px;
+}
+
+#banner {
+    border: 0px;
+    float: left;
+    margin: 10px;
+}
+
+#logo {
+    border: 0px;
+    float: left;
+}
+
+#headline {
+    border: 0px;
+    margin-top: 30px;
+    margin-left: 10px;
+    float: left;
+    font-family: Impact;
+    font-size: 60px;
+    color: #A90605;
+}
+
+#donate {
+    border: 0px;
+    margin-top: 44px;
+    margin-left: 20px;
+    float: left;
+}
+
+#icons {
+    border: 0px;
+    width: 100%;
+    float: left;
+}
+
+#text {
+    border: 0px;
+    width: 60%;
+    float: left;
+    font-family: "Andale Mono";
+}
+
+#footer {
+    border: 0px;
+    position: fixed;
+    bottom: 8px;
+    width: 100%;
+}
+
+.round-box {
+    border:1px #ccc solid;
+    padding:10px;
+    border-radius:15px;
+}
+
+.screenshots table {
+    border:0px;
+    border-spacing: 8px;
+}
+
+.screenshots-picture td {
+    border:0px;
+    width: 200px;
+    text-align: center;
+}
+
+.screenshots-text td {
+    border:1px #ccc solid;
+    border-radius:15px;
+    padding: 4px;
+    width: 200px;
+    text-align: center;
+}
+
+.screenshots-picture tr {
+    border:0px;
+    width: 200px;
+}
+
+.screenshots-text tr {
+    width: 330;
+}
+
+body {
+  border: 0px solid gray;
+  background-color: #000000;
+  font-family: "Andale Mono";
+  font-size: 16px;
+  color: #FFFFFF;
+  scrollbar-face-color: antiquewhite;
+  scrollbar-highlight-color: darkorange;
+  scrollbar-3dlight-color: yellow;
+  scrollbar-darkshadow-color: black;
+  scrollbar-shadow-color: antiquewhite;
+  scrollbar-arrow-color: blue;
+  scrollbar-track-color: lightyellow;
+}
+
+a {
+  color: #333300;
+  text-decoration: bold;
+}
+
+a:hover {
+  color: #A52A2A;
+  text-decoration: none;
+}
+a:link {
+  color: #ababab;
+  text-decoration: none;
+}
+a:visited {
+  color: #888888;
+  text-decoration: bold;
+}
+a:active {
+  color: #888888;
+  text-decoration: underline;
+}
+
+hr {
+  border: 0px;
+  color: #A90605;
+  background-color: #A90605;
+  width: 100%;
+  height: 8px;
+  float: left;
+}
+
+
+#w3x {
+  position: fixed;
+  bottom: 8px;
+  right: 2px;
+}
+
+@font-face {
+    font-family: "Andale Mono";
+    src: url(AndaleMono.ttf);
+}
