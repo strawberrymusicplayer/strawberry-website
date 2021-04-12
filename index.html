@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Strawberry Music Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    
+    
+    
+      </head>
+      <body>
+          <!-- navbar -->
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="pictures/strawberry64.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+              <a class="navbar-brand --bs-red" href="#">Strawberry Music Player</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#download">Download</a>
+                  </li>
+                  
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+            <!-- navbar -->
+
+              <!-- content -->
+
+              <div class="page-holder bg-cover"
+              style="background: url('pictures/Background.jpg');
+                    height: 100vh">
+              <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+          <div  id="main" style="width: 70vw">
+         
+<h1 class="text-center text-white">Welcome</h1>
+<h2 class="text-center text-white">Strawberry is a music player and music collection organizer.
+     It is a fork of Clementine released in 2018 aimed at music
+      collectors and audiophiles. It's written in C++ using the 
+      Qt toolkit.</h2>
+    </div>
+  </div>
+</div>
+      <div class="container bg-dark"  id="download">
+          <h2 class="text-center text-white">Select your Version</h2>
+
+                <div class="accordion accordion-flush bg-dark" id="accordionDownload">
+            <div class="accordion-item ">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <img src="pictures/source-32x32.png" class="accordionLogo"/> Source
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionDownload">
+                <div class="accordion-body">
+                    <div class="list-group-flush">
+                        <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2.tar.xz" class="list-group-item">Strawberry version 0.9.2</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <img src="pictures/appimage-32x30.png" class="accordionLogo"/> AppImage
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionDownload">
+                <div class="accordion-body">
+                    <div class="list-group-flush"> 
+                        <a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.2-Qt6-x86_64.AppImage" class="list-group-item">AppImage Qt 6</a>
+                        <a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.2-Qt5-x86_64.AppImage" class="list-group-item">AppImage Qt 5</a>
+                    </div>
+                   
+                    
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <img src="pictures/opensuse-32x32.png" class="accordionLogo"/>OpenSuse
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionDownload">
+                <div class="accordion-body">
+                    <div class="list-group-flush"> 
+                    <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.lp153.x86_64.rpm" class="list-group-item">openSUSE 15.3</a>
+                    <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.lp152.x86_64.rpm" class="list-group-item">openSUSE 15.2</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                      <img src="pictures/fedora-32x32.png" class="accordionLogo"/>Fedora
+                  </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionDownload">
+                  <div class="accordion-body">
+                      <div class="list-group-flush"> 
+                      <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc34.x86_64.rpm" class="list-group-item">Fedora 34</a>
+                      <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc33.x86_64.rpm" class="list-group-item">Fedora 33</a>
+                      <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc32.x86_64.rpm" class="list-group-item">Fedora 32</a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                      <img src="pictures/mageia-32x32.png" class="accordionLogo"/>Mageia
+                  </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionDownload">
+                  <div class="accordion-body">
+                      <div class="list-group-flush"> 
+                      <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.mga8.x86_64.rpm" class="list-group-item">Mageia 8</a>
+                      <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.mga7.x86_64.rpm" class="list-group-item">Mageia 7</a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                    <img src="pictures/debian-32x32.png" class="accordionLogo"/>Debian
+                  </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionDownload">
+                  <div class="accordion-body">
+                      <div class="list-group-flush"> 
+
+                      <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-bullseye_amd64.deb" class="list-group-item">Debian Bullseye</a>
+                      <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-buster_amd64.deb" class="list-group-item">Debian Buster</a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSeven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                    <img src="pictures/ubuntu-32x32.png" class="accordionLogo"/>Ubuntu
+                  </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionDownload">
+                  <div class="accordion-body">
+                      <div class="list-group-flush"> 
+                      <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-groovy_amd64.deb" class="list-group-item">Ubuntu Groovy</a>
+                      <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-focal_amd64.deb" class="list-group-item">Ubuntu Focal</a>
+                      <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-bionic_amd64.deb" class="list-group-item">Ubuntu Bionic</a>
+               
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingEight">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                    <img src="pictures/macos-32x32.png" class="accordionLogo"/>MacOS
+                  </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionDownload">
+                  <div class="accordion-body">
+                      <div class="list-group-flush"> 
+                        <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-bigsur-x86_64.dmg" class="list-group-item">macOS Big Sur</a>
+                        <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-catalina-x86_64.dmg" class="list-group-item">macOS Catalina</a>
+                        <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-mojave-x86_64.dmg" class="list-group-item">macOS Mojave</a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingNine">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <img src="pictures/windows-32x32.png" class="accordionLogo"/> Windows (7/8.1/10)
+                  </button>
+                </h2>
+                <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionDownload">
+                  <div class="accordion-body">
+                      <div class="list-group-flush"> 
+                        <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt6-x64.exe" class="list-group-item">Windows (7/8.1/10) 64 bit (Qt 6)</a>
+                        <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt5-x64.exe" class="list-group-item">Windows (7/8.1/10) 64 bit (Qt 5)</a>
+                        <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt6-x86.exe" class="list-group-item">Windows (7/8.1/10) 32 bit (Qt 6)</a>
+                        <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt5-x86.exe" class="list-group-item">Windows (7/8.1/10) 32 bit (Qt 5)</a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+             
+
+        </div>
+        
+    </div>
+    
+          
+          
+
+
+<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iure autem libero natus esse magni dolorem nostrum iste quasi non. Veritatis commodi voluptatum sequi voluptatem facere culpa? Molestias, dolor dicta?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eius voluptatem voluptatum nulla neque odit at ut consequuntur vero rem nemo incidunt ipsum sed, quibusdam maiores natus aspernatur, eligendi dicta?
+    Dolores voluptatum sapiente, illum, perspiciatis repudiandae soluta molestias cum at, ad fuga iusto! Sequi autem assumenda incidunt aspernatur molestiae facere magnam provident quo atque facilis, eum nisi tempore! Dicta, ex!
+    Fuga facere quod aperiam dolor, aliquam quas sint tenetur eveniet placeat vel magni praesentium saepe ipsa ratione accusamus recusandae labore ex illum eius. Porro quia nisi omnis eligendi qui quisquam.
+    Quis voluptas necessitatibus excepturi facilis itaque quo ipsa, consectetur, optio id sit reiciendis esse facere vel nulla. Magni alias distinctio temporibus ipsum rem? Eos debitis, fuga hic officia ipsa sapiente?
+    Consequuntur nostrum, repellendus necessitatibus delectus quod aspernatur? Aspernatur autem id deserunt laudantium! Obcaecati excepturi provident nam? Magni fuga assumenda illum excepturi est ipsa id accusamus voluptatibus voluptate, eius temporibus laborum!
+    Nemo doloremque ipsa adipisci culpa. Aut pariatur ipsam iste nihil unde aspernatur veniam deserunt ut, ipsum cupiditate. Ipsa consequatur quae autem doloribus esse? Similique autem numquam aperiam corrupti, saepe vero!
+    Debitis ratione sequi quo tempore natus, necessitatibus odit aspernatur impedit vero, vitae provident tenetur corrupti adipisci beatae dolorum facilis? Eos facere quos assumenda culpa sed dolor aliquam exercitationem sint voluptatum?
+    Explicabo harum ea voluptas nam! Maiores nisi hic commodi accusantium quas sapiente dignissimos, tempora asperiores, facilis corrupti quam officia et molestiae doloremque dolor dolore eaque laboriosam amet! Consequuntur, ut quis?
+    Delectus modi doloremque est odit architecto, officia ducimus. Delectus et cum consequuntur praesentium, obcaecati ipsa mollitia reprehenderit quas maiores eaque quo quasi dolore eos aut explicabo accusamus? Officia, amet ducimus.
+    Dolorem ad inventore, assumenda modi ratione quos nisi repellat natus neque saepe ducimus, aspernatur pariatur repellendus nulla, quas recusandae id. Vel tenetur, ex id tempore neque aperiam? Cum, incidunt quaerat.
+</h2>
+</div>
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+      </body>
