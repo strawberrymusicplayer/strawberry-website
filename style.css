@@ -1,0 +1,22 @@
+.accordionLogo{
+    margin-right: 10px;
+}
+
+.page-holder {
+    min-height: 100vh;
+  }
+  
+  .bg-cover {
+    background-size: cover !important;
+  }
+
+
+  #main {
+    
+  background:rgba(0, 0, 0, 0.4);
+  padding: 50px;
+  }
+
+  #download {
+    margin-top: -50px;
+  }
