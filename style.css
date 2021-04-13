@@ -1,22 +1,65 @@
-.accordionLogo{
-    margin-right: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+/*  navbar */
+.navbar {
+  background-color: #2b1c1b;
+  border-color: rgb(236, 150, 164) !important;
+  box-shadow: 0 8px 6px -6px 
+  
+ 
 }
 
+
+.navbar-brand {
+  font-family: 'Satisfy', cursive;
+  font-size: 2em; 
+  color: #ec96a4 !important;
+  margin-left: 20px;
+}
+
+
+
+/* front page */
 .page-holder {
+  background-size: cover !important;
     min-height: 100vh;
+    background-image: url('pictures/Background.jpg');
+    background-attachment:fixed ;
+    background-position: center;
+     background-repeat: no-repeat;
+   
   }
-  
-  .bg-cover {
-    background-size: cover !important;
-  }
-
-
+    
   #main {
     
-  background:rgba(0, 0, 0, 0.4);
+  background:rgba(236, 150, 164, 0.4);
   padding: 50px;
+ 
+  
+  }
+  /*  Characteristics section */
+
+  #charRow {
+    background-color: rgb(236, 152, 166);
+    ;
+  }
+  #char {
+  margin-top:50px;
+  margin-bottom: 50px;
+  
+  background-color:rgb(255, 255, 255, 80%);
+  
   }
 
+  /*  download section */
   #download {
-    margin-top: -50px;
+    margin-top: 0px;
   }
+
+  .accordionLogo{
+    margin-right: 10px;
+}
+.accordion-header {
+  font-weight: 600;
+  
+}
