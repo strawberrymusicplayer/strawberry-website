@@ -12,10 +12,10 @@
     
       </head>
       <body>
-          <!-- navbar -->
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <!----------------------------------------------------------- navbar ---------------------------------------------------------------->
+          <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-4 rounded-bottom fixed-top">
             <div class="container-fluid">
-                <img src="pictures/strawberry64.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                <img src="pictures/strawberry64.png" alt="" width="60" height="60" class="d-inline-block align-text-top">
               <a class="navbar-brand --bs-red" href="#">Strawberry Music Player</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,6 +24,9 @@
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#char">Caracteristics</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#download">Download</a>
@@ -38,24 +41,49 @@
             </div>
           </nav>
 
-            <!-- navbar -->
+           
 
-              <!-- content -->
+              <!------------------------------------------------------- content ------------------------------------------------------------->
 
-              <div class="page-holder bg-cover"
-              style="background: url('pictures/Background.jpg');
-                    height: 100vh">
-              <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
-          <div  id="main" style="width: 70vw">
-         
-<h1 class="text-center text-white">Welcome</h1>
-<h2 class="text-center text-white">Strawberry is a music player and music collection organizer.
+              <!--  front page -->
+              
+<div class="d-flex align-items-center justify-content-center page-holder" style="height: 100vh;">
+
+    <div  id="main" class="col-10 rounded">
+      <h2 class="text-center text-white">Strawberry is a music player and music collection organizer.
      It is a fork of Clementine released in 2018 aimed at music
       collectors and audiophiles. It's written in C++ using the 
       Qt toolkit.</h2>
     </div>
+  
+</div>
+
+<div class="container-fluid">
+
+  <div id="charRow" class="row justify-content-center">
+<div id="char"class="col-8 rounded shadow">
+  <h2 class="text-center">Why Strawberry Music Player?</h2>
+  <ul>
+  <li>Play and organize music</li>
+  <li>Supports WAV, FLAC, WavPack, Ogg Vorbis, Speex, MPC, TrueAudio, AIFF, MP4, MP3, ASF and Monkey's Audio</li>
+  <li>Audio CD playback</li>
+  <li>Native desktop notifications</li>
+  <li>Playlists in multiple formats</li>
+  <li>Advanced audio output and device configuration for bit-perfect playback on Linux</li>
+  <li>Edit tags on music files</li>
+  <li>Fetch tags from MusicBrainz</li>
+  <li>Album cover art from <a href="https://www.last.fm/">Last.fm</a>, <a href="https://musicbrainz.org/">Musicbrainz</a>, <a href="https://www.discogs.com/">Discogs</a>, <a href="https://www.musixmatch.com/">Musixmatch</a>, <a href="https://www.deezer.com/">Deezer</a>, <a href="https://www.tidal.com/">Tidal</a>, <a href="https://www.qobuz.com/">Qobuz</a> and <a href="https://www.spotify.com/">Spotify</a></li>
+  <li>Song lyrics from <a href="https://audd.io/">AudD</a>, <a href="https://genius.com/">Genius</a>, <a href="https://www.musixmatch.com/">Musixmatch</a>, <a href="http://www.chartlyrics.com/">ChartLyrics</a>, <a href="https://lyrics.ovh/">lyrics.ovh</a> and <a href="https://www.lololyrics.com/">lololyrics.com</a></li>
+  <li>Support for multiple backends</li>
+  <li>Audio analyzer</li>
+  <li>Audio equalizer</li>
+  <li>Transfer music to iPod, MTP or mass-storage USB player</li>
+  <li>Scrobbler with support for <a href="https://www.last.fm/">Last.fm</a>, <a href="https://libre.fm/">Libre.fm</a> and <a href="https://listenbrainz.org/">ListenBrainz</a></li>
+  <li>Streaming support for Subsonic and Tidal</li>
+  </ul>
   </div>
 </div>
+<!--  downloads -->
       <div class="container bg-dark"  id="download">
           <h2 class="text-center text-white">Select your Version</h2>
 
@@ -215,22 +243,7 @@
         
     </div>
     
-          
-          
-
-
-<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iure autem libero natus esse magni dolorem nostrum iste quasi non. Veritatis commodi voluptatum sequi voluptatem facere culpa? Molestias, dolor dicta?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eius voluptatem voluptatum nulla neque odit at ut consequuntur vero rem nemo incidunt ipsum sed, quibusdam maiores natus aspernatur, eligendi dicta?
-    Dolores voluptatum sapiente, illum, perspiciatis repudiandae soluta molestias cum at, ad fuga iusto! Sequi autem assumenda incidunt aspernatur molestiae facere magnam provident quo atque facilis, eum nisi tempore! Dicta, ex!
-    Fuga facere quod aperiam dolor, aliquam quas sint tenetur eveniet placeat vel magni praesentium saepe ipsa ratione accusamus recusandae labore ex illum eius. Porro quia nisi omnis eligendi qui quisquam.
-    Quis voluptas necessitatibus excepturi facilis itaque quo ipsa, consectetur, optio id sit reiciendis esse facere vel nulla. Magni alias distinctio temporibus ipsum rem? Eos debitis, fuga hic officia ipsa sapiente?
-    Consequuntur nostrum, repellendus necessitatibus delectus quod aspernatur? Aspernatur autem id deserunt laudantium! Obcaecati excepturi provident nam? Magni fuga assumenda illum excepturi est ipsa id accusamus voluptatibus voluptate, eius temporibus laborum!
-    Nemo doloremque ipsa adipisci culpa. Aut pariatur ipsam iste nihil unde aspernatur veniam deserunt ut, ipsum cupiditate. Ipsa consequatur quae autem doloribus esse? Similique autem numquam aperiam corrupti, saepe vero!
-    Debitis ratione sequi quo tempore natus, necessitatibus odit aspernatur impedit vero, vitae provident tenetur corrupti adipisci beatae dolorum facilis? Eos facere quos assumenda culpa sed dolor aliquam exercitationem sint voluptatum?
-    Explicabo harum ea voluptas nam! Maiores nisi hic commodi accusantium quas sapiente dignissimos, tempora asperiores, facilis corrupti quam officia et molestiae doloremque dolor dolore eaque laboriosam amet! Consequuntur, ut quis?
-    Delectus modi doloremque est odit architecto, officia ducimus. Delectus et cum consequuntur praesentium, obcaecati ipsa mollitia reprehenderit quas maiores eaque quo quasi dolore eos aut explicabo accusamus? Officia, amet ducimus.
-    Dolorem ad inventore, assumenda modi ratione quos nisi repellat natus neque saepe ducimus, aspernatur pariatur repellendus nulla, quas recusandae id. Vel tenetur, ex id tempore neque aperiam? Cum, incidunt quaerat.
-</h2>
+  </div>        
 </div>
 </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
