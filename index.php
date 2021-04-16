@@ -55,10 +55,22 @@ Strawberry is a music player and music collection organizer. It is a fork of Cle
 Strawberry Music Player uses lyrics from <a href="https://audd.io/"><img src="pictures/audd-14.png" /> AudD</a>
 </p>
 
-<p>If you like Strawberry Music Player, please consider donating using <a href="https://github.com/sponsors/jonaski">GitHub Sponsors</a><br />
-Funding developers through GitHub Sponsors is one more way to contribute to open source projects you appreciate. it helps developers get the resources they need, and recognize contributors working behind the scenes to make open source better for everyone.<br />
-You can also make a one-time donation through <a href="https://paypal.me/jonaskvinge">PayPal</a><br />
+<p>
+If you like Strawberry Music Player, please consider sponsoring.
+Funding developers is one more way to contribute to open source projects you appreciate.
+It helps developers get the resources they need, and recognize contributors working behind the scenes to make open source better for everyone.
 </p>
+
+<p>There are currently 3 options for sponsorship:</p>
+
+<ul>
+<li><a href="https://github.com/sponsors/jonaski">GitHub Sponsors</a></li>
+<li><a href="https://www.patreon.com/jonaskvinge">Patreon<a/></li>
+<li><a href="https://paypal.me/jonaskvinge">PayPal</a></li>
+</ul>
+
+<p>Monthly donations through GitHub Sponsors or Patreon is preferred, but it is also possible to donate once using Paypal.</p>
+
 
 <h1>Download</h1>
 
