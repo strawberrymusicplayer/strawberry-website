@@ -206,56 +206,75 @@ sudo apt-get install strawberry<br />
 <table>
 <tr class="screenshots-picture">
 <td class="screenshots-picture">
-<a href="pictures/screenshot-001-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-001-thumb.png" alt="Screenshot #1" /></a>
+<a href="pictures/screenshot-011-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-011-thumb.png" alt="Screenshot #1" /></a>
 </td>
 <td class="screenshots-picture">
-<a href="pictures/screenshot-002-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-002-thumb.png" alt="Screenshot #2" /></a>
+<a href="pictures/screenshot-012-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-012-thumb.png" alt="Screenshot #2" /></a>
 </td>
 <td class="screenshots-picture">
-<a href="pictures/screenshot-003-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-003-thumb.png" alt="Screenshot #3" /></a>
+<a href="pictures/screenshot-013-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-013-thumb.png" alt="Screenshot #3" /></a>
 </td>
 </tr>
 <tr class="screenshots-text">
-<td class="screenshots-text">Main window with collection information. The GUI is clean and simple.</td>
-<td class="screenshots-text">Context with song information and lyrics.</td>
-<td class="screenshots-text">Collection with song playing.</td>
+<td class="screenshots-text">Main player window showing song playing with lyrics.</td>
+<td class="screenshots-text">Main player window showing song playing with lyrics.</td>
+<td class="screenshots-text">Fullscreen player window.</td>
 </tr>
 </table>
 
 <table>
 <tr class="screenshots-picture">
 <td class="screenshots-picture">
-<a href="pictures/screenshot-004-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-004-thumb.png" alt="Screenshot #4" /></a>
+<a href="pictures/screenshot-014-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-014-thumb.png" alt="Screenshot #4" /></a>
 </td>
 <td class="screenshots-picture">
-<a href="pictures/screenshot-005-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-005-thumb.png" alt="Screenshot #5" /></a>
+<a href="pictures/screenshot-015-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-015-thumb.png" alt="Screenshot #5" /></a>
 </td>
 <td class="screenshots-picture">
-<a href="pictures/screenshot-006-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-006-thumb.png" alt="Screenshot #6" /></a>
+<a href="pictures/screenshot-016-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-016-thumb.png" alt="Screenshot #6" /></a>
 </td>
 </tr>
 <tr class="screenshots-text">
-<td class="screenshots-text">Tidal search.</td>
-<td class="screenshots-text">Playing high resolution audio in 24-bit 96kHz sample rate without resampling.</td>
-<td class="screenshots-text">Album Cover Manager for managing album covers for your albums.</td>
+<td class="screenshots-text">Collection view.</td>
+<td class="screenshots-text">Tidal search and streaming.</td>
+<td class="screenshots-text">Streaming from Radio Paradise.</td>
 </tr>
 </table>
 
 <table>
 <tr class="screenshots-picture">
 <td class="screenshots-picture">
-<a href="pictures/screenshot-007-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-007-thumb.png" alt="Screenshot #7" /></a>
+<a href="pictures/screenshot-017-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-017-thumb.png" alt="Screenshot #7" /></a>
 </td>
 <td class="screenshots-picture">
-<a href="pictures/screenshot-008-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-008-thumb.png" alt="Screenshot #8" /></a>
+<a href="pictures/screenshot-018-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-018-thumb.png" alt="Screenshot #8" /></a>
 </td>
 <td class="screenshots-picture">
-<a href="pictures/screenshot-009-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-009-thumb.png" alt="Screenshot #9" /></a>
+<a href="pictures/screenshot-019-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-019-thumb.png" alt="Screenshot #9" /></a>
 </td>
 </tr>
 <tr class="screenshots-text">
+<td class="screenshots-text">Album Cover manager, easily get covers for all of your albums.</td>
+<td class="screenshots-text">Manual cover search.</td>
 <td class="screenshots-text">Collection settings.</td>
+</tr>
+</table>
+
+<table>
+<tr class="screenshots-picture">
+<td class="screenshots-picture">
+<a href="pictures/screenshot-020-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-020-thumb.png" alt="Screenshot #7" /></a>
+</td>
+<td class="screenshots-picture">
+<a href="pictures/screenshot-021-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-021-thumb.png" alt="Screenshot #8" /></a>
+</td>
+<td class="screenshots-picture">
+<a href="pictures/screenshot-022-large.png" data-lightbox="screenshot"><img src="pictures/screenshot-022-thumb.png" alt="Screenshot #9" /></a>
+</td>
+</tr>
+<tr class="screenshots-text">
 <td class="screenshots-text">Advanced backend settings on Linux. Selecting output device will play without resampling.</td>
+<td class="screenshots-text">Scrobbler with support for last.fm, libre.fm and listenbrainz.</td>
 <td class="screenshots-text">Tidal settings.</td>
 </tr>
 </table>
