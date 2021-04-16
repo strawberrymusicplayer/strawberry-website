@@ -17,11 +17,6 @@
 <div id="banner">
 <div id="logo"><img src="pictures/strawberry128.png" alt="Strawberry Music Player" width="128" height="128" border="0" /></div>
 <div id="headline">Strawberry Music Player</div>
-<div id="donate">
-  <a href="https://paypal.me/jonaskvinge" width="1" height="1" />
-  <img src="https://www.paypalobjects.com/en_US/NO/i/btn/btn_donateCC_LG.gif" border="0" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-  </a>
-</div>
 </div>
 
 <div class="clr"></div>
