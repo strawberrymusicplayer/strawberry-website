@@ -236,8 +236,8 @@ sudo apt-get install strawberry<br />
 </tr>
 <tr class="screenshots-text">
 <td class="screenshots-text">Collection view.</td>
-<td class="screenshots-text">Tidal search and streaming.</td>
 <td class="screenshots-text">Streaming from Radio Paradise.</td>
+<td class="screenshots-text">Tidal search and streaming.</td>
 </tr>
 </table>
 
