@@ -3,30 +3,40 @@
 h1 {
   margin-top: 10px;
   font-family: 'Satisfy', cursive;
-  color: #ec96a4 !important;
+  color:hsl(350, 100%, 61%);
   
 
 }
 a {
-  color: #ec96a4;
+  color:hsl(0, 100%, 68%);
   text-decoration: none;
 }
 a:hover {
   
   text-decoration: underline;
+  color: #ec96a4;
 }
 p {
   font-weight: 600;
 }
 
 .darkcol {
-  background-color: #2b1c1b;
-  padding: 30px;
+  background-color: hsl(4, 23%, 20%);
+  
+  padding: 100px;
+  font-weight: 600;
  
 }
 .whitecol {
-  padding: 30px;
+  background-color: hsl(4, 23%, 90%);
+  padding: 100px;
+  font-weight: 600;
  
+}
+i {
+  padding-right: 5px;
+  font-size: 20px;
+  /* color: hsl(350, 100%, 68%); */
 }
 
 
@@ -34,8 +44,8 @@ p {
 
 /*  navbar */
 .navbar {
-  background-color: #2b1c1b;
-  border-color: rgb(236, 150, 164) !important;
+  background-color:hsl(4, 23%, 20%);
+  border-color: hsl(350, 100%, 68%) !important;
   box-shadow: 0 8px 6px -6px 
   
  
@@ -45,7 +55,7 @@ p {
 .navbar-brand {
   font-family: 'Satisfy', cursive;
   font-size: 2em; 
-  color: #ec96a4 !important;
+  color: hsl(350, 100%, 68%) !important;
   margin-left: 20px;
 }
 
@@ -73,10 +83,7 @@ p {
   /*  Features section */
 
 
-  .secondrow {
-    background-color:rgb(255, 255, 255, 80%);
-  
-  }
+
   
   .secondrow li{
       
@@ -86,12 +93,9 @@ p {
  
 
   /*  download section */
-  #download {
+
    
     
-    background-color:rgb(255, 255, 255, 80%)
-  }
-
   .accordionLogo{
     margin-right: 10px;
 }
@@ -112,12 +116,18 @@ p {
 }
 
 .carousel-icon {
-  color: #ec96a4;
+  color: hsl(350, 100%, 68%);
   font-size: 3em;
 }
 #screenshots {
   padding-top: 100px;
  
 
+}
+
+#screenshots h1 {
+  background-color: rgba(236, 150, 164, 0.6);
+  color:white;
+  padding: 10px;
 }
 
