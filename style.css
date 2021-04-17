@@ -1,4 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+/* general */
+h1 {
+  margin-top: 10px;
+  font-family: 'Satisfy', cursive;
+  color: #ec96a4 !important;
+  
+
+}
+a {
+  color: #ec96a4;
+  text-decoration: none;
+}
+a:hover {
+  
+  text-decoration: underline;
+}
+p {
+  font-weight: 600;
+}
+
+.darkcol {
+  background-color: #2b1c1b;
+  padding: 30px;
+ 
+}
+.whitecol {
+  padding: 30px;
+ 
+}
+
+
+
 
 /*  navbar */
 .navbar {
@@ -22,8 +54,8 @@
 /* front page */
 .page-holder {
   background-size: cover !important;
-    min-height: 100vh;
-    background-image: url('pictures/Background.jpg');
+    min-height: 50vh;
+    background-image: url('pictures/background.jpg');
     background-attachment:fixed ;
     background-position: center;
      background-repeat: no-repeat;
@@ -37,29 +69,55 @@
  
   
   }
-  /*  Characteristics section */
 
-  #charRow {
-    background-color: rgb(236, 152, 166);
-    ;
-  }
-  #char {
-  margin-top:50px;
-  margin-bottom: 50px;
-  
-  background-color:rgb(255, 255, 255, 80%);
+  /*  Features section */
+
+
+  .secondrow {
+    background-color:rgb(255, 255, 255, 80%);
   
   }
+  
+  .secondrow li{
+      
+    padding-left: 10px;
+  }
+
+ 
 
   /*  download section */
   #download {
-    margin-top: 0px;
+   
+    
+    background-color:rgb(255, 255, 255, 80%)
   }
 
   .accordionLogo{
     margin-right: 10px;
 }
-.accordion-header {
-  font-weight: 600;
+.accordion-button {
+  font-weight: 600 !important;
   
 }
+
+/*  screenshots */
+
+.card-text {
+  text-align: center;
+  color: aliceblue;
+ 
+}
+.card {
+  background-color:rgba(236, 150, 164, 0.4); ;
+}
+
+.carousel-icon {
+  color: #ec96a4;
+  font-size: 3em;
+}
+#screenshots {
+  padding-top: 100px;
+ 
+
+}
+
