@@ -69,112 +69,112 @@ It helps developers get the resources they need, and recognize contributors work
 
 <h1>Download</h1>
 
-<p>Version 0.9.2</p>
+<p>Version 0.9.3</p>
 
 <table border="0">
 
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2.tar.xz"><img src="pictures/source-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2.tar.xz">Source</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3.tar.xz"><img src="pictures/source-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3.tar.xz">Source</a></td>
     <td></td>
   </tr>
 
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.2-Qt5-x86_64.AppImage"><img src="pictures/appimage-32x30.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.2-Qt5-x86_64.AppImage">AppImage Qt 5</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.3-Qt5-x86_64.AppImage"><img src="pictures/appimage-32x30.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.3-Qt5-x86_64.AppImage">AppImage Qt 5</a></td>
     <td></td>
   </tr>
 
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.2-Qt6-x86_64.AppImage"><img src="pictures/appimage-32x30.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.2-Qt6-x86_64.AppImage">AppImage Qt 6</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.3-Qt6-x86_64.AppImage"><img src="pictures/appimage-32x30.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.3-Qt6-x86_64.AppImage">AppImage Qt 6</a></td>
     <td></td>
   </tr>
 
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.lp152.x86_64.rpm"><img src="pictures/opensuse-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.lp152.x86_64.rpm">openSUSE 15.2</a></td> 
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.lp152.x86_64.rpm"><img src="pictures/opensuse-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.lp152.x86_64.rpm">openSUSE 15.2</a></td>
   </tr>
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.lp153.x86_64.rpm"><img src="pictures/opensuse-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.lp153.x86_64.rpm">openSUSE 15.3</a></td> 
-  </tr>
-
-  <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc32.x86_64.rpm"><img src="pictures/fedora-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc32.x86_64.rpm">Fedora 32</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc33.x86_64.rpm"><img src="pictures/fedora-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc33.x86_64.rpm">Fedora 33</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc34.x86_64.rpm"><img src="pictures/fedora-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc34.x86_64.rpm">Fedora 34</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.lp153.x86_64.rpm"><img src="pictures/opensuse-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.lp153.x86_64.rpm">openSUSE 15.3</a></td>
   </tr>
 
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.mga7.x86_64.rpm"><img src="pictures/mageia-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.mga7.x86_64.rpm">Mageia 7</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.fc32.x86_64.rpm"><img src="pictures/fedora-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.fc32.x86_64.rpm">Fedora 32</a></td>
   </tr>
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.mga8.x86_64.rpm"><img src="pictures/mageia-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.mga8.x86_64.rpm">Mageia 8</a></td>
-  </tr>
-
-  <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-buster_amd64.deb"><img src="pictures/debian-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-buster_amd64.deb">Debian Buster</a></td> 
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.fc33.x86_64.rpm"><img src="pictures/fedora-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.fc33.x86_64.rpm">Fedora 33</a></td>
   </tr>
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-bullseye_amd64.deb"><img src="pictures/debian-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-bullseye_amd64.deb">Debian Bullseye</a></td> 
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.fc34.x86_64.rpm"><img src="pictures/fedora-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.fc34.x86_64.rpm">Fedora 34</a></td>
   </tr>
 
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-bionic_amd64.deb"><img src="pictures/ubuntu-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-bionic_amd64.deb">Ubuntu Bionic</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.mga7.x86_64.rpm"><img src="pictures/mageia-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.mga7.x86_64.rpm">Mageia 7</a></td>
   </tr>
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-focal_amd64.deb"><img src="pictures/ubuntu-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-focal_amd64.deb">Ubuntu Focal</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-groovy_amd64.deb"><img src="pictures/ubuntu-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-groovy_amd64.deb">Ubuntu Groovy</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.mga8.x86_64.rpm"><img src="pictures/mageia-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-1.mga8.x86_64.rpm">Mageia 8</a></td>
   </tr>
 
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-mojave-x86_64.dmg"><img src="pictures/macos-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-mojave-x86_64.dmg">macOS Mojave</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.3-buster_amd64.deb"><img src="pictures/debian-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.3-buster_amd64.deb">Debian Buster</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.3-bullseye_amd64.deb"><img src="pictures/debian-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.3-bullseye_amd64.deb">Debian Bullseye</a></td>
   </tr>
 
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-catalina-x86_64.dmg"><img src="pictures/macos-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-catalina-x86_64.dmg">macOS Catalina</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.3-bionic_amd64.deb"><img src="pictures/ubuntu-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.3-bionic_amd64.deb">Ubuntu Bionic</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.3-focal_amd64.deb"><img src="pictures/ubuntu-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.3-focal_amd64.deb">Ubuntu Focal</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.3-groovy_amd64.deb"><img src="pictures/ubuntu-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry_0.9.3-groovy_amd64.deb">Ubuntu Groovy</a></td>
   </tr>
 
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-bigsur-x86_64.dmg"><img src="pictures/macos-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-bigsur-x86_64.dmg">macOS Big Sur</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-mojave-x86_64.dmg"><img src="pictures/macos-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-mojave-x86_64.dmg">macOS Mojave</a></td>
   </tr>
 
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt5-x64.exe"><img src="pictures/windows-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt5-x64.exe">Windows (7/8.1/10) 64 bit (Qt 5)</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt6-x64.exe"><img src="pictures/windows-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt6-x64.exe">Windows (7/8.1/10) 64 bit (Qt 6)</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-catalina-x86_64.dmg"><img src="pictures/macos-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-catalina-x86_64.dmg">macOS Catalina</a></td>
   </tr>
 
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt5-x86.exe"><img src="pictures/windows-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt5-x86.exe">Windows (7/8.1/10) 32 bit (Qt 5)</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-bigsur-x86_64.dmg"><img src="pictures/macos-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/strawberry-0.9.3-bigsur-x86_64.dmg">macOS Big Sur</a></td>
+  </tr>
+
+  <tr>
+    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.3-Qt5-x64.exe"><img src="pictures/windows-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.3-Qt5-x64.exe">Windows (7/8.1/10) 64 bit (Qt 5)</a></td>
   </tr>
   <tr>
-    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt6-x86.exe"><img src="pictures/windows-32x32.png" /></a></td>
-    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt6-x86.exe">Windows (7/8.1/10) 32 bit (Qt 6)</a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.3-Qt6-x64.exe"><img src="pictures/windows-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.3-Qt6-x64.exe">Windows (7/8.1/10) 64 bit (Qt 6)</a></td>
+  </tr>
+
+  <tr>
+    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.3-Qt5-x86.exe"><img src="pictures/windows-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.3-Qt5-x86.exe">Windows (7/8.1/10) 32 bit (Qt 5)</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.3-Qt6-x86.exe"><img src="pictures/windows-32x32.png" /></a></td>
+    <td><a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.3-Qt6-x86.exe">Windows (7/8.1/10) 32 bit (Qt 6)</a></td>
   </tr>
 
 </table>
