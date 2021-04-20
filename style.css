@@ -131,3 +131,16 @@ i {
   padding: 10px;
 }
 
+/*  footer */
+.footer {
+  background-color:hsl(4, 23%, 20%);
+  border-color: hsl(350, 100%, 68%) !important;
+  padding: 20px; 
+  font-weight: 600;
+
+  
+ 
+}
+.spacer {
+  min-height:200px;
+}
