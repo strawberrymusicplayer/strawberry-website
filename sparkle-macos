@@ -4,14 +4,33 @@
         <title>strawberry</title>
         <link>http://www.strawberrymusicplayer.org/</link>
         <description>Strawberry Music Player</description>
-        <language>en</language>
         <item>
-            <title>0.8.4</title>
-            <pubDate>Sat, 14 Nov 2020 17:41:53 -0800</pubDate>
-            <sparkle:minimumSystemVersion>10.13.4</sparkle:minimumSystemVersion>
-            <enclosure url="https://files.strawberrymusicplayer.org/strawberry-0.8.4.dmg" sparkle:version="0.8.4" sparkle:shortVersionString="0.8.4" length="77202396" type="application/octet-stream" sparkle:edSignature="7/bFtyExEWT8TpmbK4C5TyC0ZJ3RSAsjfArDuZ72qrKda8D8VAC6n9cQ1P41s5kINd/raWLDSq3rnrpEHlJkCQ=="/>
+            <title>0.9.3</title>
+            <pubDate>Sun, 18 Apr 2021 12:58:55 -0700</pubDate>
+            <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+            <sparkle:maximumSystemVersion>10.14.6</sparkle:maximumSystemVersion>
+            <enclosure url="https://files.strawberrymusicplayer.org/strawberry-0.9.3-mojave-x86_64.dmg" sparkle:version="0.9.3" sparkle:shortVersionString="0.9.3" length="66635509" type="application/octet-stream" sparkle:edSignature="MFifwNfmg133rY9fbwSNRBmVEAsGJo4noXJbqSJYr9BKnInpxMDSkN1S5iIsw0Dz744RLq005mQ+axg6GL2ZCg=="/>
             <sparkle:releaseNotesLink>
-              https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/0.8.4/Changelog
+              https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/0.9.3/Changelog
+            </sparkle:releaseNotesLink>
+        </item>
+        <item>
+            <title>0.9.3</title>
+            <pubDate>Sun, 18 Apr 2021 12:58:53 -0700</pubDate>
+            <sparkle:minimumSystemVersion>10.15</sparkle:minimumSystemVersion>
+            <sparkle:maximumSystemVersion>10.15.7</sparkle:maximumSystemVersion>
+            <enclosure url="https://files.strawberrymusicplayer.org/strawberry-0.9.3-catalina-x86_64.dmg" sparkle:version="0.9.3" sparkle:shortVersionString="0.9.3" length="66600357" type="application/octet-stream" sparkle:edSignature="43LXIWNnuaaMZIKIuVg5br5QIWOs2biUEbOSgSt2wWqULexVMsiKXp5BJH8YOkDmm1E1lWMi4GYP6yXqCRAPAg=="/>
+            <sparkle:releaseNotesLink>
+              https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/0.9.3/Changelog
+            </sparkle:releaseNotesLink>
+        </item>
+        <item>
+            <title>0.9.3</title>
+            <pubDate>Sun, 18 Apr 2021 12:58:50 -0700</pubDate>
+            <sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://files.strawberrymusicplayer.org/strawberry-0.9.3-bigsur-x86_64.dmg" sparkle:version="0.9.3" sparkle:shortVersionString="0.9.3" length="66636756" type="application/octet-stream" sparkle:edSignature="2avznLTWfgkwxn450OB7vMa6pw/r64x1DEPF4xRxYXLGUQ4svBcSGOQbG+VBdLTAU1/x5TUk8OF2VZBSSuOlCw=="/>
+            <sparkle:releaseNotesLink>
+              https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/0.9.3/Changelog
             </sparkle:releaseNotesLink>
         </item>
     </channel>
