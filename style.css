@@ -3,49 +3,27 @@
 h1 {
   margin-top: 10px;
   font-family: 'Satisfy', cursive;
-  color:hsl(350, 100%, 61%);
+  color: #ec96a4 !important;
   
 
 }
 a {
-  color:hsl(0, 100%, 68%);
+  color: #ec96a4;
   text-decoration: none;
 }
 a:hover {
   
   text-decoration: underline;
-  color: #ec96a4;
-}
-p {
-  font-weight: 600;
 }
 
-.darkcol {
-  background-color: hsl(4, 23%, 20%);
-  
-  padding: 100px;
-  font-weight: 600;
- 
-}
-.whitecol {
-  background-color: hsl(4, 23%, 90%);
-  padding: 100px;
-  font-weight: 600;
- 
-}
-i {
-  padding-right: 5px;
-  font-size: 20px;
-  /* color: hsl(350, 100%, 68%); */
-}
 
 
 
 
 /*  navbar */
 .navbar {
-  background-color:hsl(4, 23%, 20%);
-  border-color: hsl(350, 100%, 68%) !important;
+  background-color: #2b1c1b;
+  border-color: rgb(236, 150, 164) !important;
   box-shadow: 0 8px 6px -6px 
   
  
@@ -55,7 +33,7 @@ i {
 .navbar-brand {
   font-family: 'Satisfy', cursive;
   font-size: 2em; 
-  color: hsl(350, 100%, 68%) !important;
+  color: #ec96a4 !important;
   margin-left: 20px;
 }
 
@@ -64,8 +42,8 @@ i {
 /* front page */
 .page-holder {
   background-size: cover !important;
-    min-height: 50vh;
-    background-image: url('pictures/background.jpg');
+    min-height: 100vh;
+    background-image: url('pictures/Background.jpg');
     background-attachment:fixed ;
     background-position: center;
      background-repeat: no-repeat;
@@ -82,20 +60,31 @@ i {
 
   /*  Features section */
 
+  #charRow {
+    /* background-color: rgb(236, 152, 166); */
+    margin-top: -50px;
+    margin-bottom: -50px;
+  }
+  .secondrow {
+  
 
-
+  background-color:rgb(255, 255, 255, 80%);
+  
+  }
   
   .secondrow li{
-      
+
+    font-weight: 600;
     padding-left: 10px;
   }
 
- 
-
   /*  download section */
-
+  #download {
    
     
+    background-color:rgb(255, 255, 255, 80%)
+  }
+
   .accordionLogo{
     margin-right: 10px;
 }
@@ -116,7 +105,7 @@ i {
 }
 
 .carousel-icon {
-  color: hsl(350, 100%, 68%);
+  color: #ec96a4;
   font-size: 3em;
 }
 #screenshots {
@@ -125,22 +114,3 @@ i {
 
 }
 
-#screenshots h1 {
-  background-color: rgba(236, 150, 164, 0.6);
-  color:white;
-  padding: 10px;
-}
-
-/*  footer */
-.footer {
-  background-color:hsl(4, 23%, 20%);
-  border-color: hsl(350, 100%, 68%) !important;
-  padding: 20px; 
-  font-weight: 600;
-
-  
- 
-}
-.spacer {
-  min-height:200px;
-}
