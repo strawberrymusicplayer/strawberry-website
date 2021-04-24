@@ -1,431 +1,741 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Strawberry Music Player</title>
-    <link rel="shortcut icon" type="image/jpg" href="pictures/favicon.png"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    
-    
-    
-  </head>
-  <body>
-          <!----------------------------------------------------------- navbar ---------------------------------------------------------------->
-          <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-4 rounded-bottom fixed-top">
-            <div class="container-fluid">
-                <img src="pictures/strawberry64.png" alt="" width="60" height="60" class="d-inline-block align-text-top">
-              <a class="navbar-brand --bs-red" href="#">Strawberry Music Player</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#char">Why Strawberry</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#download">Downloads</a>
-                  </li>
-                  
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
 
-           
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, indiv class=" mage/jpg" href="pictures/favicon.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link href="style.css" rel="stylesheet" />
+</head>
 
-              <!------------------------------------------------------- content ------------------------------------------------------------->
+<body>
+  <!----------------------------------------------------------- navbar ---------------------------------------------------------------->
+  <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-4 rounded-bottom">
+    <div class="container-fluid">
+      <img src="pictures/strawberry64.png" alt="" width="60" height="60" class="d-inline-block align-text-top">
+      <a class="navbar-brand --bs-red" href="#">Strawberry Music Player</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contribute">Contribute</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#screenshots">Screenshots</a>
+          </li>
 
-              <!--  front page -->
-              
-<section class="row align-items-center justify-content-center page-holder" style="height: 100vh;">
-    <div  id="main" class="col-8 rounded">
-      <h2 class="text-center text-white">Strawberry is a music player and music collection organizer.
-     It is a fork of Clementine released in 2018 aimed at music
-      collectors and audiophiles. It's written in C++ using the 
-      Qt toolkit.</h2>
+          <li class="nav-item">
+            <a class="nav-link" href="#download">Downloads</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#repositories">Repositories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#help">Help</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</section>
+  </nav>
 
-<div class="container-fluid">
 
-  <div id="charRow" class="row justify-content-center ">
-    <div class="secondrow col-lg-5 col-md-10 rounded shadow">
-  <h1 class="text-center">Features</h1>
-  <ul class="list-unstyled">
-  <li class="bi bi-soundwave">Play and organize music</li>
-  <li class="bi bi-soundwave">Supports WAV, FLAC, WavPack, Ogg Vorbis, Speex, MPC, TrueAudio, AIFF, MP4, MP3, ASF and Monkey's Audio</li>
-  <li class="bi bi-soundwave">Audio CD playback</li>
-  <li class="bi bi-soundwave">Native desktop notifications</li>
-  <li class="bi bi-soundwave">Playlists in multiple formats</li>
-  <li class="bi bi-soundwave">Advanced audio output and device configuration for bit-perfect playback on Linux</li>
-  <li class="bi bi-soundwave">Edit tags on music files</li>
-  <li class="bi bi-soundwave">Fetch tags from MusicBrainz</li>
-  <li class="bi bi-soundwave">Album cover art from <a href="https://www.last.fm/">Last.fm</a>, <a href="https://musicbrainz.org/">Musicbrainz</a>, <a href="https://www.discogs.com/">Discogs</a>, <a href="https://www.musixmatch.com/">Musixmatch</a>, <a href="https://www.deezer.com/">Deezer</a>, <a href="https://www.tidal.com/">Tidal</a>, <a href="https://www.qobuz.com/">Qobuz</a> and <a href="https://www.spotify.com/">Spotify</a></li>
-  <li class="bi bi-soundwave">Song lyrics from <a href="https://audd.io/">AudD</a>, <a href="https://genius.com/">Genius</a>, <a href="https://www.musixmatch.com/">Musixmatch</a>, <a href="http://www.chartlyrics.com/">ChartLyrics</a>, <a href="https://lyrics.ovh/">lyrics.ovh</a> and <a href="https://www.lololyrics.com/">lololyrics.com</a></li>
-  <li class="bi bi-soundwave">Support for multiple backends</li>
-  <li class="bi bi-soundwave">Audio analyzer</li>
-  <li class="bi bi-soundwave">Audio equalizer</li>
-  <li class="bi bi-soundwave">Transfer music to iPod, MTP or mass-storage USB player</li>
-  <li class="bi bi-soundwave">Scrobbler with support for <a href="https://www.last.fm/">Last.fm</a>, <a href="https://libre.fm/">Libre.fm</a> and <a href="https://listenbrainz.org/">ListenBrainz</a></li>
-  <li class="bi bi-soundwave">Streaming support for Subsonic and Tidal</li>
-  <li class="bi bi-soundwave">Strawberry Music Player uses lyrics from <a href="https://audd.io/"><img src="pictures/audd-14.png"> AudD</a>
-  </li>
-  </ul>
+
+  <!------------------------------------------------------- content ------------------------------------------------------------->
+
+  <!--  front page -->
+
+  <section class="row align-items-center justify-content-center page-holder" style="height: 50vh;">
+    <div id="main" class="col-8 rounded">
+      <h2 class="text-center text-white">Strawberry is a music player and music collection organizer for Linux, macOS
+        and Windows. It is aimed at music collectors and audiophiles.
+        With Strawberry you can play and manage your digital music collection, stream your favorite radios, or play
+        music from Subsonic, Tidal and Qobuz.</h2>
     </div>
-    <div class="col-1 d-none d-lg-block"></div>
-    <div class="secondrow col-lg-3 col-md-10 rounded shadow">
-      <h1>How to help spread the word</h1>
-    
-      <p>
-      <ul>
-      <li>Star the project on <a href="https://github.com/strawberrymusicplayer/strawberry">GitHub</a></li>
-      <li>Ask your distro to package it</li>
-      <li>Vote for it on <a href="https://alternativeto.net/software/strawberry/">AlternativeTo</a></li>
-      <li>Like and share it on <a href="https://www.facebook.com/strawberrymusicplayer/">Facebook</a></li>
-      <li>Vote for it on <a href="https://www.slant.co">Slant</a></li>
-      </ul>
-      
-<p>If you like Strawberry Music Player, please consider donating using <a href="https://github.com/sponsors/jonaski">GitHub Sponsors</a><br />
-  Funding developers through GitHub Sponsors is one more way to contribute to open source projects you appreciate. it helps developers get the resources they need, and recognize contributors working behind the scenes to make open source better for everyone.<br />
-  You can also make a one-time donation through <a href="https://paypal.me/jonaskvinge">PayPal</a><br />
-  </p>
-  <p>There are currently 3 options for sponsorship:</p>
-  <ul>
-    <li><a href="https://github.com/sponsors/jonaski">GitHub Sponsors</a></li>
-    <li><a href="https://www.patreon.com/jonaskvinge">Patreon</a><a></a></li><a>
-    </a><li><a></a><a href="https://paypal.me/jonaskvinge">PayPal</a></li>
-    </ul>
-    <p>Monthly donations through GitHub Sponsors or Patreon is preferred, but it is also possible to donate once using Paypal.</p>
+  </section>
 
-     </div>
-    
-  </div>   
-  
+  <section class="container-fluid secondrow">
+
+    <div class="row justify-content-center">
+      <div class="darkcol col text-white">
+        <h1 id="features" class="text-center">Features</h1>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-compact-disc"></i> Play and organize music</li>
+          <li><i class="fas fa-compact-disc"></i> Supports WAV, FLAC, WavPack, Ogg Vorbis, Speex, MPC, TrueAudio, AIFF,
+            MP4, MP3, ASF and Monkey's Audio</li>
+          <li><i class="fas fa-compact-disc"></i> Audio CD playback</li>
+          <li><i class="fas fa-compact-disc"></i> Native desktop notifications</li>
+          <li><i class="fas fa-compact-disc"></i> Playlists in multiple formats</li>
+          <li><i class="fas fa-compact-disc"></i> Advanced audio output and device configuration for bit-perfect
+            playback on Linux</li>
+          <li><i class="fas fa-compact-disc"></i> Edit tags on music files</li>
+          <li><i class="fas fa-compact-disc"></i> Fetch tags from MusicBrainz</li>
+          <li><i class="fas fa-compact-disc"></i> Album cover art from <a href="https://www.last.fm/">Last.fm</a>, <a
+              href="https://musicbrainz.org/">Musicbrainz</a>, <a href="https://www.discogs.com/">Discogs</a>, <a
+              href="https://www.musixmatch.com/">Musixmatch</a>, <a href="https://www.deezer.com/">Deezer</a>, <a
+              href="https://www.tidal.com/">Tidal</a>, <a href="https://www.qobuz.com/">Qobuz</a> and <a
+              href="https://www.spotify.com/">Spotify</a></li>
+          <li><i class="fas fa-compact-disc"></i> Song lyrics from <a href="https://audd.io/">AudD</a>, <a
+              href="https://genius.com/">Genius</a>, <a href="https://www.musixmatch.com/">Musixmatch</a>, <a
+              href="http://www.chartlyrics.com/">ChartLyrics</a>, <a href="https://lyrics.ovh/">lyrics.ovh</a> and <a
+              href="https://www.lololyrics.com/">lololyrics.com</a></li>
+          <li><i class="fas fa-compact-disc"></i> Support for multiple backends</li>
+          <li><i class="fas fa-compact-disc"></i> Audio analyzer</li>
+          <li><i class="fas fa-compact-disc"></i> Audio equalizer</li>
+          <li><i class="fas fa-compact-disc"></i> Transfer music to iPod, MTP or mass-storage USB player</li>
+          <li><i class="fas fa-compact-disc"></i> Scrobbler with support for <a href="https://www.last.fm/">Last.fm</a>,
+            <a href="https://libre.fm/">Libre.fm</a> and <a href="https://listenbrainz.org/">ListenBrainz</a>
+          </li>
+          <li><i class="fas fa-compact-disc"></i> Streaming support for Subsonic and Tidal</li>
+          <li><i class="fas fa-compact-disc"></i> Strawberry Music Player uses lyrics from <a
+              href="https://audd.io/"><img src="pictures/audd-14.png"> AudD</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="contribute" class="rightrow col-lg-7  whitecol">
+
+        <h1>How to help us spread the word</h1>
+        <p>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-compact-disc"></i> Star the project on <a
+              href="https://github.com/strawberrymusicplayer/strawberry">GitHub</a></li>
+          <li><i class="fas fa-compact-disc"></i> Ask your distro to package it</li>
+          <li><i class="fas fa-compact-disc"></i> Vote for it on <a
+              href="https://alternativeto.net/software/strawberry/">AlternativeTo</a></li>
+          <li><i class="fas fa-compact-disc"></i> Like and share it on <a
+              href="https://www.facebook.com/strawberrymusicplayer/">Facebook</a></li>
+          <li><i class="fas fa-compact-disc"></i> Vote for it on <a href="https://www.slant.co">Slant</a></li>
+        </ul>
+        <h1>Sponsor Us</h1>
+        <p>If you like Strawberry Music Player, please consider donating using <a
+            href="https://github.com/sponsors/jonaski">GitHub Sponsors</a><br />
+          Funding developers through GitHub Sponsors is one more way to contribute to open source projects you
+          appreciate. it helps developers get the resources they need, and recognize contributors working behind the
+          scenes to make open source better for everyone.<br />
+          You can also make a one-time donation through <a href="https://paypal.me/jonaskvinge">PayPal</a><br />
+        </p>
+        <p>There are currently 3 options for sponsorship:</p>
+        <ul class="list-unstyled">
+          <li><i class="fab fa-github"></i><a href="https://github.com/sponsors/jonaski">GitHub Sponsors</a></li>
+          <li><i class="fab fa-patreon"></i><a href="https://www.patreon.com/jonaskvinge">Patreon</a></li>
+          <li><i class="fab fa-paypal"></i><a href="https://paypal.me/jonaskvinge">PayPal</a></li>
+        </ul>
+        <p>Monthly donations through GitHub Sponsors or Patreon is preferred, but it is also possible to donate once
+          using Paypal.</p>
+
+      </div>
+
+  </section>
+
   <!-- Screenshots -->
+  <section id="screenshots" class="justify-content-center page-holder">
+    <div class="container">
+      <div class="row justify-content-center">
+        <h1 class="title text-center">Screenshots</h1>
+        <!-- card 1 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen11">
+            <img src="pictures/screenshot-011-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Main player window showing song playing with lyrics.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen11" tabindex="-1" aria-labelledby="screen11Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-011-large.png" class="img-fluid" alt="screenshot 11">
 
-  <div id="screenshots" class="row  justify-content-center page-holder" >
-     
- 
-        <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
-          <h1 class="text-center ">Screenshots</h1>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card h-100">
-                <img src="pictures/screenshot-001-large.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  
-                  <p class="card-text">Main window with collection information. The GUI is clean and simple.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="pictures/screenshot-002-large.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  
-                  <p class="card-text">Context with song information and lyrics.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="pictures/screenshot-003-large.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                
-                  <p class="card-text">Collection with song playing.</p>
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Main player window showing song playing with lyrics.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <img src="pictures/screenshot-004-large.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                
-                <h4 class="card-text">Tidal search.</h4>
+        <!-- card 2 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen12">
+            <img src="pictures/screenshot-012-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Main player window showing song playing with lyrics.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen12" tabindex="-1" aria-labelledby="screen12Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-012-large.png" class="img-fluid" alt="screenshot 12">
+
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Main player window showing song playing with lyrics.</p>
+
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="pictures/screenshot-005-large.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                
-                <p class="card-text">Playing high resolution audio in 24-bit 96kHz sample rate without resampling.</p>
+        </div>
+        <!-- card 3 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen13">
+            <img src="pictures/screenshot-013-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Fullscreen player window.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen13" tabindex="-1" aria-labelledby="screen13Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-013-large.png" class="img-fluid" alt="screenshot 13">
+
+                    <!-- Modal -->
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Fullscreen player window.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="pictures/screenshot-006-large.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                
-                <p class="card-text">Album Cover Manager for managing album covers for your albums.</p>
+        </div>
+        <!-- card 4 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen14">
+            <img src="pictures/screenshot-014-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Collection view.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen14" tabindex="-1" aria-labelledby="screen14Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-014-large.png" class="img-fluid" alt="screenshot 14">
+
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Collection view.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 5 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen15">
+            <img src="pictures/screenshot-015-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Streaming from Radio Paradise.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen15" tabindex="-1" aria-labelledby="screen15Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-015-large.png" class="img-fluid" alt="screenshot 15">
+
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Streaming from Radio Paradise.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 6 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen16">
+            <img src="pictures/screenshot-016-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Tidal search and streaming.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen16" tabindex="-1" aria-labelledby="screen16Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-016-large.png" class="img-fluid" alt="screenshot 16">
+
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Tidal search and streaming.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 7 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen17">
+            <img src="pictures/screenshot-014-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Album Cover manager, easily get covers for all of your albums.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen17" tabindex="-1" aria-labelledby="screen17Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-017-large.png" class="img-fluid" alt="screenshot 17">
+
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Album Cover manager, easily get covers for all of your albums.</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 8 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen18">
+            <img src="pictures/screenshot-018-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Manual cover search.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen18" tabindex="-1" aria-labelledby="screen18Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-018-large.png" class="img-fluid" alt="screenshot 18">
+
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Manual cover search.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 9 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen19">
+            <img src="pictures/screenshot-019-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Collection settings.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen19" tabindex="-1" aria-labelledby="screen19Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-019-large.png" class="img-fluid" alt="screenshot 19">
+
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Collection settings.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 10 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen20">
+            <img src="pictures/screenshot-020-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Advanced backend settings on Linux. Selecting output device will play without
+              resampling.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen20" tabindex="-1" aria-labelledby="screen20Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-020-large.png" class="img-fluid" alt="screenshot 20">
+
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Advanced backend settings on Linux. Selecting output device will play without
+                      resampling.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 11 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen21">
+            <img src="pictures/screenshot-021-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Scrobbler with support for last.fm, libre.fm and listenbrainz.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen21" tabindex="-1" aria-labelledby="screen21Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-021-large.png" class="img-fluid" alt="screenshot 21">
+
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Scrobbler with support for last.fm, libre.fm and listenbrainz.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 12 -->
+        <div class="card" style="width: 18rem;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#screen22">
+            <img src="pictures/screenshot-022-thumb.png" class="card-img-top" alt="...">
+          </button>
+          <div class="card-body">
+            <p class="card-text">Tidal settings.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="screen22" tabindex="-1" aria-labelledby="screen22Label" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="pictures/screenshot-022-large.png" class="img-fluid" alt="screenshot 22">
+
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <p>Tidal settings.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-        <div class="carousel-item">
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card h-100">
-                <img src="pictures/screenshot-007-large.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  
-                  <p class="card-text">Collection settings.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="pictures/screenshot-008-large.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  
-                  <p class="card-text">Advanced backend settings on Linux. Selecting output device will play without resampling.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="pictures/screenshot-009-large.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  
-                  <p class="card-text">Tidal settings.</p>
-                </div>
-              </div>
-            
-            </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
-        <i class="bi bi-skip-backward-btn  carousel-icon"></i>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
-        <i class="bi bi-skip-end-btn carousel-icon"></i>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
+  </section>
 
-</div>
-</div>
+  <!--  technical + install -->
+  <section class="row thirdrow">
+    <!--  downloads -->
+    <div id="download" class="col-lg-4 whitecol">
+      <h1 class="text-center">Downloads</h1>
+      <h4 class="text-center">Current version: 0.9.2</h4>
 
-
-
-     <!--  technical + install -->
-     <div class="row">
-       <!--  downloads -->
-    <div id="download" class="col-lg-4 col-md-10 rounded shadow" >
-      <h1 class="text-center">Pick your Version</h1>
-
-            <div id="accordionDownload" class="accordion accordion-flush bg-transparent" >
+      <div id="accordionDownload" class="accordion accordion-flush bg-transparent">
         <div class="accordion-item bg-transparent ">
           <h2 class="accordion-header bg-transparent" id="flush-headingOne">
-            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                <img src="pictures/source-32x32.png" class="accordionLogo"/> Source
+            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <img src="pictures/source-32x32.png" class="accordionLogo" /> Source
             </button>
           </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse bg-transparent" aria-labelledby="flush-headingOne" data-bs-parent="#accordionDownload">
+          <div id="flush-collapseOne" class="accordion-collapse collapse bg-transparent"
+            aria-labelledby="flush-headingOne" data-bs-parent="#accordionDownload">
             <div class="accordion-body bg-transparent">
-                <div class="list-group-flush bg-transparent">
-                    <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2.tar.xz" class="list-group-item bg-transparent">Strawberry version 0.9.2</a>
-                </div>
+              <div class="list-group-flush bg-transparent">
+                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2.tar.xz"
+                  class="list-group-item bg-transparent">LZMA compressed source</a>
+              </div>
             </div>
           </div>
         </div>
         <div class="accordion-item bg-transparent">
           <h2 class="accordion-header bg-transparent" id="flush-headingTwo">
-            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                <img src="pictures/appimage-32x30.png" class="accordionLogo"/> AppImage
+            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <img src="pictures/appimage-32x30.png" class="accordionLogo" /> AppImage
             </button>
           </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse bg-transparent" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionDownload">
+          <div id="flush-collapseTwo" class="accordion-collapse collapse bg-transparent"
+            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionDownload">
             <div class="accordion-body">
-                <div class="list-group-flush"> 
-                    <a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.2-Qt6-x86_64.AppImage" class="list-group-item bg-transparent">AppImage Qt 5</a>
-                    <a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.2-Qt5-x86_64.AppImage" class="list-group-item bg-transparent">AppImage Qt 5</a>
-                </div>
-               
-                
+              <div class="list-group-flush">
+                <a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.2-Qt6-x86_64.AppImage"
+                  class="list-group-item bg-transparent">AppImage Qt 5</a>
+                <a href="https://files.strawberrymusicplayer.org/Strawberry-0.9.2-Qt5-x86_64.AppImage"
+                  class="list-group-item bg-transparent">AppImage Qt 5</a>
+              </div>
             </div>
           </div>
         </div>
         <div class="accordion-item bg-transparent">
           <h2 class="accordion-header bg-transparent" id="flush-headingThree">
-            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                <img src="pictures/opensuse-32x32.png" class="accordionLogo"/>OpenSuse
+            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <img src="pictures/opensuse-32x32.png" class="accordionLogo" />OpenSUSE
             </button>
           </h2>
-          <div id="flush-collapseThree bg-transparent" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionDownload">
+          <div id="flush-collapseThree" class="accordion-collapse collapse  bg-transparent"
+            aria-labelledby="flush-headingThree" data-bs-parent="#accordionDownload">
             <div class="accordion-body bg-transparent">
-                <div class="list-group-flush bg-transparent"> 
-                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.lp153.x86_64.rpm" class="list-group-item bg-transparent">openSUSE 15.3</a>
-                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.lp152.x86_64.rpm" class="list-group-item bg-transparent">openSUSE 15.2</a>
-                </div>
+              <div class="list-group-flush bg-transparent">
+                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.lp153.x86_64.rpm"
+                  class="list-group-item bg-transparent">openSUSE 15.3</a>
+                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.lp152.x86_64.rpm"
+                  class="list-group-item bg-transparent">openSUSE 15.2</a>
+              </div>
             </div>
           </div>
         </div>
         <div class="accordion-item bg-transparent">
-            <h2 class="accordion-header bg-transparent" id="flush-headingFour">
-              <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
-                  <img src="pictures/fedora-32x32.png" class="accordionLogo"/>Fedora
-              </button>
-            </h2>
-            <div id="flush-collapseFour" class="accordion-collapse collapse bg-transparent" aria-labelledby="flush-headingFour" data-bs-parent="#accordionDownload">
-              <div class="accordion-body bg-transparent">
-                  <div class="list-group-flush bg-transparent"> 
-                  <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc34.x86_64.rpm" class="list-group-item bg-transparent">Fedora 34</a>
-                  <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc33.x86_64.rpm" class="list-group-item bg-transparent">Fedora 33</a>
-                  <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc32.x86_64.rpm" class="list-group-item bg-transparent">Fedora 32</a>
-                  </div>
+          <h2 class="accordion-header bg-transparent" id="flush-headingFour">
+            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              <img src="pictures/fedora-32x32.png" class="accordionLogo" />Fedora
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse bg-transparent"
+            aria-labelledby="flush-headingFour" data-bs-parent="#accordionDownload">
+            <div class="accordion-body bg-transparent">
+              <div class="list-group-flush bg-transparent">
+                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc34.x86_64.rpm"
+                  class="list-group-item bg-transparent">Fedora 34</a>
+                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc33.x86_64.rpm"
+                  class="list-group-item bg-transparent">Fedora 33</a>
+                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.fc32.x86_64.rpm"
+                  class="list-group-item bg-transparent">Fedora 32</a>
               </div>
             </div>
           </div>
+        </div>
 
         <div class="accordion-item bg-transparent">
-            <h2 class="accordion-header bg-transparent" id="flush-headingFive">
-              <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                  <img src="pictures/mageia-32x32.png" class="accordionLogo"/>Mageia
-              </button>
-            </h2>
-            <div id="flush-collapseFive" class="accordion-collapse collapse bg-transparent" aria-labelledby="flush-headingFive" data-bs-parent="#accordionDownload">
-              <div class="accordion-body bg-transparent">
-                  <div class="list-group-flush bg-transparent"> 
-                  <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.mga8.x86_64.rpm" class="list-group-item bg-transparent">Mageia 8</a>
-                  <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.mga7.x86_64.rpm" class="list-group-item bg-transparent">Mageia 7</a>
-                  </div>
+          <h2 class="accordion-header bg-transparent" id="flush-headingFive">
+            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              <img src="pictures/mageia-32x32.png" class="accordionLogo" />Mageia
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse bg-transparent"
+            aria-labelledby="flush-headingFive" data-bs-parent="#accordionDownload">
+            <div class="accordion-body bg-transparent">
+              <div class="list-group-flush bg-transparent">
+                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.mga8.x86_64.rpm"
+                  class="list-group-item bg-transparent">Mageia 8</a>
+                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-1.mga7.x86_64.rpm"
+                  class="list-group-item bg-transparent">Mageia 7</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="accordion-item bg-transparent">
-            <h2 class="accordion-header bg-transparent" id="flush-headingSix">
-              <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                <img src="pictures/debian-32x32.png" class="accordionLogo"/>Debian
-              </button>
-            </h2>
-            <div id="flush-collapseSix" class="accordion-collapse collapse bg-transparent" aria-labelledby="flush-headingSix" data-bs-parent="#accordionDownload">
-              <div class="accordion-body">
-                  <div class="list-group-flush"> 
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header bg-transparent" id="flush-headingSix">
+            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+              <img src="pictures/debian-32x32.png" class="accordionLogo" />Debian
+            </button>
+          </h2>
+          <div id="flush-collapseSix" class="accordion-collapse collapse bg-transparent"
+            aria-labelledby="flush-headingSix" data-bs-parent="#accordionDownload">
+            <div class="accordion-body">
+              <div class="list-group-flush">
 
-                  <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-bullseye_amd64.deb" class="list-group-item bg-transparent">Debian Bullseye</a>
-                  <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-buster_amd64.deb" class="list-group-item bg-transparent">Debian Buster</a>
-                  </div>
+                <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-bullseye_amd64.deb"
+                  class="list-group-item bg-transparent">Debian Bullseye</a>
+                <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-buster_amd64.deb"
+                  class="list-group-item bg-transparent">Debian Buster</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="accordion-item bg-transparent">
-            <h2 class="accordion-header bg-transparent" id="flush-headingSeven">
-              <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-                <img src="pictures/ubuntu-32x32.png" class="accordionLogo"/>Ubuntu
-              </button>
-            </h2>
-            <div id="flush-collapseSeven" class="accordion-collapse collapse bg-transparent" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionDownload">
-              <div class="accordion-body bg-transparent">
-                  <div class="list-group-flush bg-transparent"> 
-                  <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-groovy_amd64.deb" class="list-group-item bg-transparent">Ubuntu Groovy</a>
-                  <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-focal_amd64.deb" class="list-group-item bg-transparent">Ubuntu Focal</a>
-                  <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-bionic_amd64.deb" class="list-group-item bg-transparent">Ubuntu Bionic</a>
-           
-                  </div>
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header bg-transparent" id="flush-headingSeven">
+            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+              <img src="pictures/ubuntu-32x32.png" class="accordionLogo" />Ubuntu
+            </button>
+          </h2>
+          <div id="flush-collapseSeven" class="accordion-collapse collapse bg-transparent"
+            aria-labelledby="flush-headingSeven" data-bs-parent="#accordionDownload">
+            <div class="accordion-body bg-transparent">
+              <div class="list-group-flush bg-transparent">
+                <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-groovy_amd64.deb"
+                  class="list-group-item bg-transparent">Ubuntu Groovy</a>
+                <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-focal_amd64.deb"
+                  class="list-group-item bg-transparent">Ubuntu Focal</a>
+                <a href="https://files.strawberrymusicplayer.org/strawberry_0.9.2-bionic_amd64.deb"
+                  class="list-group-item bg-transparent">Ubuntu Bionic</a>
+
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="accordion-item bg-transparent">
-            <h2 class="accordion-header bg-transparent" id="flush-headingEight">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-                <img src="pictures/macos-32x32.png" class="accordionLogo"/>MacOS
-              </button>
-            </h2>
-            <div id="flush-collapseEight" class="accordion-collapse collapse bg-transparent" aria-labelledby="flush-headingEight" data-bs-parent="#accordionDownload">
-              <div class="accordion-body bg-transparent">
-                  <div class="list-group-flush"> 
-                    <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-bigsur-x86_64.dmg" class="list-group-item bg-transparent">macOS Big Sur</a>
-                    <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-catalina-x86_64.dmg" class="list-group-item bg-transparent">macOS Catalina</a>
-                    <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-mojave-x86_64.dmg" class="list-group-item bg-transparent">macOS Mojave</a>
-                  </div>
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header bg-transparent" id="flush-headingEight">
+            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+              <img src="pictures/macos-32x32.png" class="accordionLogo" />MacOS
+            </button>
+          </h2>
+          <div id="flush-collapseEight" class="accordion-collapse collapse bg-transparent"
+            aria-labelledby="flush-headingEight" data-bs-parent="#accordionDownload">
+            <div class="accordion-body bg-transparent">
+              <div class="list-group-flush">
+                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-bigsur-x86_64.dmg"
+                  class="list-group-item bg-transparent">macOS Big Sur</a>
+                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-catalina-x86_64.dmg"
+                  class="list-group-item bg-transparent">macOS Catalina</a>
+                <a href="https://files.strawberrymusicplayer.org/strawberry-0.9.2-mojave-x86_64.dmg"
+                  class="list-group-item bg-transparent">macOS Mojave</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="accordion-item bg-transparent">
-            <h2 class="accordion-header bg-transparent" id="flush-headingNine">
-              <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                <img src="pictures/windows-32x32.png" class="accordionLogo"/> Windows (7/8.1/10)
-              </button>
-            </h2>
-            <div id="flush-collapseNine" class="accordion-collapse collapse bg-transparent " aria-labelledby="flush-headingNine" data-bs-parent="#accordionDownload">
-              <div class="accordion-body bg-transparent">
-                  <div class="list-group-flush"> 
-                    <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt6-x64.exe" class="list-group-item bg-transparent">Windows (7/8.1/10) 64 bit (Qt 5)</a>
-                    <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt5-x64.exe" class="list-group-item bg-transparent">Windows (7/8.1/10) 64 bit (Qt 5)</a>
-                    <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt6-x86.exe" class="list-group-item bg-transparent">Windows (7/8.1/10) 32 bit (Qt 5)</a>
-                    <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt5-x86.exe" class="list-group-item bg-transparent">Windows (7/8.1/10) 32 bit (Qt 5)</a>
-                  </div>
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header bg-transparent" id="flush-headingNine">
+            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+              <img src="pictures/windows-32x32.png" class="accordionLogo" /> Windows (7/8.1/10)
+            </button>
+          </h2>
+          <div id="flush-collapseNine" class="accordion-collapse collapse bg-transparent "
+            aria-labelledby="flush-headingNine" data-bs-parent="#accordionDownload">
+            <div class="accordion-body bg-transparent">
+              <div class="list-group-flush">
+                <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt6-x64.exe"
+                  class="list-group-item bg-transparent">Windows (7/8.1/10) 64 bit (Qt 5)</a>
+                <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt5-x64.exe"
+                  class="list-group-item bg-transparent">Windows (7/8.1/10) 64 bit (Qt 5)</a>
+                <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt6-x86.exe"
+                  class="list-group-item bg-transparent">Windows (7/8.1/10) 32 bit (Qt 5)</a>
+                <a href="https://files.strawberrymusicplayer.org/StrawberrySetup-0.9.2-Qt5-x86.exe"
+                  class="list-group-item bg-transparent">Windows (7/8.1/10) 32 bit (Qt 5)</a>
               </div>
             </div>
           </div>
+        </div>
 
-         
+
+
+      </div>
 
     </div>
-    
-</div>
-      
-     <div class="col">
-       <h1>Technical Help</h1>
+    <div id="help" class="col darkcol text-white">
+      <h1 id="repositories">Repositories</h1>
+      <p>Repositories containing the latest development releases are available for openSUSE, Fedora and Mageia through
+        <a href="https://download.opensuse.org/repositories/home:/jonaski:/audio/">openSUSE buildservice</a>
+      </p>
+      <p>Ubuntu and possible Ubuntu clones can use the PPA respository:<br />
+        <code id="target">add-apt-repository ppa:jonaski/strawberry<br />
+      sudo apt-get update<br />
+      sudo apt-get install strawberry<br /></code>
+      </p>
+      <h1>Technical Help</h1>
       <p>
         For technical help, questions and discussion join our forum on
         <a href="https://forum.strawberrymusicplayer.org/">https://forum.strawberrymusicplayer.org/</a><br />
-        </p>
-        
-        <p>
+      </p>
+      <p>
         You can obtain and view the sourcecode, open issues and join the development on github at:
         <a href="https://github.com/strawberrymusicplayer/strawberry">https://github.com/strawberrymusicplayer/strawberry</a><br />
-        </p>
-        
-        <p>Newer exprimental development builds can be found for openSUSE, Fedora, Mageia, Ubuntu, Debian, macOS and Windows on <a href="http://builds.strawberrymusicplayer.org/">http://builds.strawberrymusicplayer.org/</a></p>
-        
-        <p>There currently isn't any macOS developers actively working on this project. If you want to join the development and contribute, join us on <a href="https://github.com/strawberrymusicplayer/strawberry">GitHub</a></p>
-        
-        <h1>Repositories</h1>
-        
-        <p>Repositories containing the latest development releases are available for openSUSE, Fedora and Mageia through <a href="https://download.opensuse.org/repositories/home:/jonaski:/audio/">openSUSE buildservice</a>
-        </p>
-        
-        <p>Ubuntu and possible Ubuntu clones can use the PPA respository:<br />
-        
-          <code id="target">add-apt-repository ppa:jonaski/strawberry<br />
-        sudo apt-get update<br />
-        sudo apt-get install strawberry<br />
-        </code> 
-        </p>
-     </div>
-      
-      
-     
+      </p>
+
+      <p>Newer exprimental development builds can be found for openSUSE, Fedora, Mageia, Ubuntu, Debian, macOS and
+        Windows on <a href="http://builds.strawberrymusicplayer.org/">http://builds.strawberrymusicplayer.org/</a></p>
+
+      <p>There currently isn't any macOS developers actively working on this project. If you want to join the
+        development and contribute, join us on <a href="https://github.com/strawberrymusicplayer/strawberry">GitHub</a>
+      </p>
     </div>
-</div>
+    </div>
+  </section>
+  <section class="row spacer justify-content-center page-holder"></section>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <footer class="container-fluid footer border-top border-4 rounded-top ">
+    <div class="row justify-content-center">
+      <div class="col "><img class="float-end" src="pictures/strawberry128.png" alt=""></div>
+      <div class="col text-white">
+        <h2>Find Us</h2>
+        <ul class="list-unstyled">
+          <li>
+            <i class="fab fa-github"></i><a href="https://github.com/strawberrymusicplayer/strawberry">GitHub</a>
+          </li>
+          <li>
+            <i class="fab fa-facebook"></i><a href="https://www.facebook.com/strawberrymusicplayer/">Facebook</a>
+          </li>
+          <li>
+            <i class="fas fa-comments"></i><a href="https://forum.strawberrymusicplayer.org/">Forum</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="ending col-8 justify-content-center text-white">
+        <p class="text-center">Copyright © 2013-2020 Jonas Kvinge </br> Verbatim copying and redistribution of this
+          entire page are permitted provided this notice is preserved.<br />
+          Design by <a href="https://github.com/Isma1306">Ismael Carrea</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
-      </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+
+  <script src="index.js"></script>
+</body>
