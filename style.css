@@ -21,13 +21,11 @@ p {
 
 .darkcol {
   background-color: hsl(4, 23%, 20%);
-  padding: 100px;
   font-weight: 600;
  
 }
 .whitecol {
   background-color: hsl(4, 23%, 90%);
-  padding: 100px;
   font-weight: 600;
 }
 
@@ -46,8 +44,8 @@ i {
 
 .navbar-brand {
   font-family: 'Satisfy', cursive;
-  font-size: 2em; 
   color: hsl(350, 100%, 68%) !important;
+  font-size: 2rem;
   margin-left: 20px;
 }
 .nav-link:hover {
@@ -62,7 +60,6 @@ i {
 /* front page */
 .page-holder {
   background-size: cover !important;
-    min-height: 50vh;
     background-image: url('pictures/background.jpg');
     background-attachment:fixed ;
     background-position: center;
@@ -71,7 +68,7 @@ i {
     
   #main {
   background:rgba(236, 150, 164, 0.4);
-  padding: 50px;
+ 
   }
 
 
@@ -87,7 +84,6 @@ i {
 
 .card {
   background-color:rgba(236, 150, 164, 0.6);
-  margin: 10px;
   padding: 0px;
   }
 
@@ -119,8 +115,6 @@ i {
 .accordion-button {font-weight: 600 !important;}
 
 
-/* spacer */
-.spacer {min-height:200px;}
 
 /*  footer */
 .footer {
@@ -133,6 +127,45 @@ i {
   font-size: 0.8em;
 }
 
+/* responsiveness */
+@media (max-width: 1200px) {
+  legend {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+  
+  h1,
+  .h1 {
+    font-size: calc(1.375rem + 1.5vw);
+    }
+    .navbar-brand{
 
-
-
+    font-size: calc(1.25rem + 0.9vw);
+  }
+  h2,
+  .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+  }
+  h3,
+  .h3 {
+    font-size: calc(1.3rem + 0.6vw);
+  }
+  h4,
+  .h4 {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+  .display-1 {
+    font-size: calc(1.725rem + 5.7vw);
+  }
+  .display-2 {
+    font-size: calc(1.675rem + 5.1vw);
+  }
+  .display-3 {
+    font-size: calc(1.575rem + 3.9vw);
+  }
+  .display-4 {
+    font-size: calc(1.475rem + 2.7vw);
+  }
+  .close {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+}
