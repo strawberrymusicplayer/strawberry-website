@@ -21,13 +21,11 @@ p {
 
 .darkcol {
   background-color: hsl(4, 23%, 20%);
-  padding: 100px;
   font-weight: 600;
  
 }
 .whitecol {
   background-color: hsl(4, 23%, 90%);
-  padding: 100px;
   font-weight: 600;
 }
 
@@ -46,7 +44,6 @@ i {
 
 .navbar-brand {
   font-family: 'Satisfy', cursive;
-  font-size: 2em; 
   color: hsl(350, 100%, 68%) !important;
   margin-left: 20px;
 }
@@ -62,7 +59,6 @@ i {
 /* front page */
 .page-holder {
   background-size: cover !important;
-    min-height: 50vh;
     background-image: url('pictures/background.jpg');
     background-attachment:fixed ;
     background-position: center;
@@ -71,7 +67,7 @@ i {
     
   #main {
   background:rgba(236, 150, 164, 0.4);
-  padding: 50px;
+ 
   }
 
 
@@ -87,7 +83,6 @@ i {
 
 .card {
   background-color:rgba(236, 150, 164, 0.6);
-  margin: 10px;
   padding: 0px;
   }
 
@@ -119,8 +114,6 @@ i {
 .accordion-button {font-weight: 600 !important;}
 
 
-/* spacer */
-.spacer {min-height:200px;}
 
 /*  footer */
 .footer {
@@ -132,7 +125,4 @@ i {
 .ending {
   font-size: 0.8em;
 }
-
-
-
 
