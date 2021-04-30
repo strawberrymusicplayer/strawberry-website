@@ -68,6 +68,7 @@ i {
     
   #main {
   background:rgba(236, 150, 164, 0.4);
+  
  
   }
 
@@ -139,11 +140,11 @@ i {
     }
     .navbar-brand{
 
-    font-size: calc(1.25rem + 0.9vw);
+    font-size: calc(1.1rem + 0.9vw);
   }
   h2,
   .h2 {
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: calc(1.0rem + 0.9vw);
   }
   h3,
   .h3 {
