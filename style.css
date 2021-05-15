@@ -1,9 +1,10 @@
 
 /* general */
 h1 {
-  margin-top: 10px;
+
   font-family: 'Satisfy', cursive;
   color:hsl(350, 100%, 61%);
+  
 }
 
 a {
@@ -24,9 +25,15 @@ p {
   font-weight: 600;
  
 }
+.darkcol h1 {text-shadow: 2px 2px 5px rgb(32, 32, 32);
+
+}
 .whitecol {
   background-color: hsl(4, 23%, 90%);
   font-weight: 600;
+}
+.whitecol h1 {text-shadow: 2px 2px 5px rgb(180, 180, 180);
+
 }
 
 i {
@@ -48,12 +55,15 @@ i {
   font-size: 2rem;
   margin-left: 20px;
 }
+
 .nav-link:hover {
   color: #ec96a4 !important;
   text-decoration: none;
 }
+
 .nav-link {
   color: white !important;
+  margin-left:2rem;
 }
 
 
@@ -68,7 +78,6 @@ i {
     
   #main {
   background:rgba(236, 150, 164, 0.4);
-  
  
   }
 
@@ -80,34 +89,53 @@ i {
 /*  screenshots */
 .card-text {
   text-align: center;
-  color: aliceblue;
+  color: white;
+  
  }
 
 .card {
-  background-color:rgba(236, 150, 164, 0.6);
+  background-color:hsl(4, 23%, 20%);
   padding: 0px;
+  
+ 
   }
 
-.carousel-icon {
-  color: hsl(350, 100%, 68%);
-  font-size: 3em;
-}
-
-#screenshots {padding-top: 100px;}
-
-#screenshots .title {
-  background-color: rgba(236, 150, 164, 0.6);
-  color:white;
-  padding:10px;
-  
-}
 .modal-content {
   text-align: center;
-  background-color:whitesmoke;
-  color: hsl(350, 100%, 68%);
+  background-color:hsl(4, 23%, 90%);
+  color: black;
  
 }
 
+.owl-prev i:hover,
+.owl-next i:hover{
+  color: hsl(350, 100%, 68%) !important;
+  
+}
+  
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+.owl-prev i,
+.owl-next i {
+  
+  color: white;
+  text-shadow: 2px 2px 5px rgb(180, 180, 180);
+  font-size: 3em !important;
+
+}
+
+.owl-prev {
+  left: -3rem;
+}
+
+.owl-next {
+  right: -3rem;
+}
 
 
 /*  download section */
