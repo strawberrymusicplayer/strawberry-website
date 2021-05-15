@@ -34,10 +34,10 @@
           <a class="nav-link" href="#features">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#sponsorus">Sponsor us</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#spreadtheword">Spread the word</a>
+          <a class="nav-link" href="#sponsorus">Sponsor us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#screenshots">Screenshots</a>
@@ -54,6 +54,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#repositories">Repositories</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#spreadtheword">Spread the word</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -69,8 +72,7 @@
     <div id="main" class="col-11 col-md-9 col-lg-8 my-2 my-lg-5 p-1 p-lg-5 align-self-center rounded">
       <h2 class="text-center text-white">Strawberry is a music player and music collection organizer for Linux, macOS
         and Windows. It is aimed at music collectors and audiophiles.
-        With Strawberry you can play and manage your digital music collection, stream your favorite radios, or play
-        music from Subsonic, Tidal and Qobuz.</h2>
+        With Strawberry you can play and manage your digital music collection, or stream your favorite radios.</h2>
     </div>
   </div>
   </section>
@@ -86,11 +88,12 @@
             MP4, MP3, ASF and Monkey's Audio</li>
           <li><i class="fas fa-compact-disc"></i> Audio CD playback [*]</li>
           <li><i class="fas fa-compact-disc"></i> Native desktop notifications</li>
-          <li><i class="fas fa-compact-disc"></i> Playlists in multiple formats</li>
+          <li><i class="fas fa-compact-disc"></i> Playlist management and playlists in multiple formats</li>
+          <li><i class="fas fa-compact-disc"></i> Smart and dynamic playlists</li>
           <li><i class="fas fa-compact-disc"></i> Advanced audio output and device configuration for bit-perfect
             playback on Linux</li>
-          <li><i class="fas fa-compact-disc"></i> Edit tags on music files</li>
-          <li><i class="fas fa-compact-disc"></i> Fetch tags from MusicBrainz</li>
+          <li><i class="fas fa-compact-disc"></i> Edit tags on audio files</li>
+          <li><i class="fas fa-compact-disc"></i> Automatically retrieve tags from MusicBrainz</li>
           <li><i class="fas fa-compact-disc"></i> Album cover art from <a href="https://www.last.fm/">Last.fm</a>, <a
               href="https://musicbrainz.org/">Musicbrainz</a>, <a href="https://www.discogs.com/">Discogs</a>, <a
               href="https://www.musixmatch.com/">Musixmatch</a>, <a href="https://www.deezer.com/">Deezer</a>, <a
@@ -107,17 +110,30 @@
           <li><i class="fas fa-compact-disc"></i> Scrobbler with support for <a href="https://www.last.fm/">Last.fm</a>,
             <a href="https://libre.fm/">Libre.fm</a> and <a href="https://listenbrainz.org/">ListenBrainz</a>
           </li>
-          <li><i class="fas fa-compact-disc"></i> Streaming support for Subsonic, Tidal and Qobuz</li>
+          <li><i class="fas fa-compact-disc"></i> Streaming support for Subsonic-compatible servers</li>
+          <li><i class="fas fa-compact-disc"></i> Unofficial streaming support for Tidal and Qobuz [**]</li>
         </ul>
-        <p>* Audio CD and device support is not available on Windows.</p>
+        <p>
+        * Audio CD and device support is not available on Windows.<br />
+        ** Tidal and QObuz support is unofficial and requires API tokens from an official application.
+        </p>
       </div>
 
       <div class="rightrow col-lg-7  whitecol p-1 p-lg-5">
 
+        <h1 id="about">About</h1>
+        <p>
+          Strawberry is a music player and music collection organizer. It is aimed at music collectors and audiophiles.
+          With Strawberry you can play and manage your digital music collection, or stream your favorite radios.
+          It also has unofficial streaming support for Tidal and Qobuz.
+          Strawberry is <a href="https://www.gnu.org/philosophy/free-sw.en.html">free software</a> released under GPL. The source code is available on <a href ="https://github.com/strawberrymusicplayer/strawberry">GitHub</a>.
+          It's written in C++ using the Qt toolkit and GStreamer. Strawberry is compatible with both Qt version 5 and 6.
+        </p>
+
         <h1 id="sponsorus">Sponsor Us</h1>
         <p>
           If you enjoy Strawberry, please consider sponsoring the project.<br />
-          Strawberry is free software (Free as in freedom), but is depending on donations from our users to survive.
+          Strawberry is free software, both free as in freedom and as cost, but is depending on donations from our users.
           There are few developers, and most of the development is done by one person.
           Strawberry has become very popular over the past few years with hundred of users.
           Maintaining the application, running all the services, providing releases and dealing with bugs and technical issues is a time-consuming job.
@@ -129,16 +145,6 @@
           <li><i class="fab fa-paypal"></i><a href="https://paypal.me/jonaskvinge">PayPal</a></li>
         </ul>
         <p>Monthly donations through GitHub Sponsors or Patreon is preferred, but it is also possible to donate once using Paypal.</p>
-
-        <h1 id="spreadtheword">Help spread the word</h1>
-        <p>
-        <ul class="list-unstyled">
-          <li><i class="fas fa-compact-disc"></i> Star the project on <a href="https://github.com/strawberrymusicplayer/strawberry">GitHub</a></li>
-          <li><i class="fas fa-compact-disc"></i> Ask your distro to package it</li>
-          <li><i class="fas fa-compact-disc"></i> Vote for it on <a href="https://alternativeto.net/software/strawberry/">AlternativeTo</a></li>
-          <li><i class="fas fa-compact-disc"></i> Like and share it on <a href="https://www.facebook.com/strawberrymusicplayer/">Facebook</a></li>
-          <li><i class="fas fa-compact-disc"></i> Vote for it on <a href="https://www.slant.co">Slant</a></li>
-        </ul>
 
       </div>
     </div>
@@ -708,6 +714,16 @@
       <p>For the latest development changes you can use <code id="target2">ppa:jonaski/strawberry-unstable</code> instead.</p>
       <p>Repositories containing the latest development changes is also available for Fedora, openSUSE and Mageia through <a href="https://download.opensuse.org/repositories/home:/jonaski:/audio/">openSUSE buildservice</a></p>
 
+      <h1 id="spreadtheword">Help spread the word</h1>
+      <p>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-compact-disc"></i> Star the project on <a href="https://github.com/strawberrymusicplayer/strawberry">GitHub</a></li>
+          <li><i class="fas fa-compact-disc"></i> Ask your distro to package it</li>
+          <li><i class="fas fa-compact-disc"></i> Vote for it on <a href="https://alternativeto.net/software/strawberry/">AlternativeTo</a></li>
+          <li><i class="fas fa-compact-disc"></i> Like and share it on <a href="https://www.facebook.com/strawberrymusicplayer/">Facebook</a></li>
+          <li><i class="fas fa-compact-disc"></i> Vote for it on <a href="https://www.slant.co">Slant</a></li>
+        </ul>
+      </p>
     </div>
   </div>
   </section>
