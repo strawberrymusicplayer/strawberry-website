@@ -66,11 +66,7 @@ i {
      background-repeat: no-repeat;
   }
     
-  #main {
-  background:rgba(236, 150, 164, 0.4);
-  
- 
-  }
+  #main {background:rgba(236, 150, 164, 0.4); }
 
 
   /*  Features section */
@@ -99,14 +95,15 @@ i {
   background-color: rgba(236, 150, 164, 0.6);
   color:white;
   padding:10px;
-  
 }
+
 .modal-content {
   text-align: center;
-  background-color:whitesmoke;
-  color: hsl(350, 100%, 68%);
- 
+  background-color:rgba(236, 150, 164, 0.6);
+  color: white;
 }
+
+.modal-header, .modal-footer {border-style: none;}
 
 
 
