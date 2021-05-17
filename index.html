@@ -40,7 +40,7 @@
           <a class="nav-link" href="#sponsorus">Sponsor us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#screenshots">Screenshots</a>
+          <a class="nav-link" href="#screenshot">Screenshots</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#download">Downloads</a>
@@ -81,7 +81,8 @@
 
     <div class="row justify-content-center">
       <div class="darkcol p-1 p-lg-5 col text-white">
-        <h1 id="features" class="text-center">Features</h1>
+        <a class="anchor" id="features"></a>
+        <h1 class="text-center">Features</h1>
         <ul class="list-unstyled">
           <li><i class="fas fa-compact-disc"></i> Play and organize music</li>
           <li><i class="fas fa-compact-disc"></i> Supports WAV, FLAC, WavPack, Ogg Vorbis, Speex, MPC, TrueAudio, AIFF,
@@ -120,8 +121,8 @@
       </div>
 
       <div class="rightrow col-lg-7  whitecol p-1 p-lg-5">
-
-        <h1 id="about">About</h1>
+        <a class="anchor" id="about"></a>
+        <h1>About</h1>
         <p>
           Strawberry is a music player and music collection organizer. It is aimed at music collectors and audiophiles.
           With Strawberry you can play and manage your digital music collection, or stream your favorite radios.
@@ -129,8 +130,8 @@
           Strawberry is <a href="https://www.gnu.org/philosophy/free-sw.en.html">free software</a> released under GPL. The source code is available on <a href ="https://github.com/strawberrymusicplayer/strawberry">GitHub</a>.
           It's written in C++ using the Qt toolkit and GStreamer. Strawberry is compatible with both Qt version 5 and 6.
         </p>
-
-        <h1 id="sponsorus">Sponsor Us</h1>
+        <a class="anchor" id="sponsorus"></a>
+        <h1>Sponsor Us</h1>
         <p>
           If you enjoy Strawberry, please consider sponsoring the project.<br />
           Strawberry is free software, both free as in freedom and as cost, but is depending on donations from our users.
@@ -155,6 +156,7 @@
   <section id="screenshots" class="container-fluid justify-content-center page-holder">
     <div class="container">
       <div class="row justify-content-center gap-3 py-3 py-lg-5">
+        <a class="anchor" id="screenshot"></a>
         <h1 class="title text-center">Screenshots</h1>
         <!-- card 1 -->
         <div class="card" style="width: 18rem;">
@@ -481,7 +483,8 @@
   <section class="container-fluid thirdrow">
     <!--  downloads -->
     <div class="row">
-    <div id="download" class="col-lg-4 whitecol p-1 p-lg-5">
+      <div class="col-lg-4 whitecol p-1 p-lg-5">
+        <a class="anchor" id="download"></a>
       <h1 class="text-center">Downloads</h1>
       <h4 class="text-center">Current version: 0.9.3</h4>
 
@@ -682,23 +685,23 @@
 
     </div>
     <div class="col darkcol p-1 p-lg-5 text-white">
-
-      <h1 id="help">Help</h1>
+      <a class="anchor" id="help"></a>
+      <h1>Help</h1>
       <p>
         For help, questions and discussion join our forum on
         <a href="https://forum.strawberrymusicplayer.org/">https://forum.strawberrymusicplayer.org/</a><br />
       </p>
 
       <p>There currently isn't any macOS developers actively working on this project, so we might not be able to help with issues specific to macOS.</p>
-
-      <h1 id="participate">Participate</h1>
+      <a class="anchor" id="participate"></a>
+      <h1>Participate</h1>
       <p>
         Since Strawberry is an free and open-source project, it is possible and encouraged to participate in the development.
         The development takes place on <a href="https://github.com/strawberrymusicplayer/strawberry">GitHub</a>.<br />
         You can also participate by answering questions, reporting bugs, or helping with documentation.
       </p>
-
-      <h1 id="repositories">Repositories</h1>
+      <a class="anchor" id="repositories"></a>
+      <h1>Repositories</h1>
       <p>
         Strawberry is available in the package repositories on most Linux distributions including Fedora, openSUSE and Arch.<br />
         However, Strawberry is currently not available on Ubuntu. For Ubuntu and derivatives, we have an official PPA repository.
@@ -713,8 +716,8 @@
       </p>
       <p>For the latest development changes you can use <code id="target2">ppa:jonaski/strawberry-unstable</code> instead.</p>
       <p>Repositories containing the latest development changes is also available for Fedora, openSUSE and Mageia through <a href="https://download.opensuse.org/repositories/home:/jonaski:/audio/">openSUSE buildservice</a></p>
-
-      <h1 id="spreadtheword">Help spread the word</h1>
+      <a class="anchor" id="spreadtheword"></a>
+      <h1>Help spread the word</h1>
       <p>
         <ul class="list-unstyled">
           <li><i class="fas fa-compact-disc"></i> Star the project on <a href="https://github.com/strawberrymusicplayer/strawberry">GitHub</a></li>
@@ -769,5 +772,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
     crossorigin="anonymous"></script>
-
+    <script>
+      $('.navbar-collapse a').click(function(){
+          $(".navbar-collapse").collapse('hide');
+      });
+  </script>
 </body>

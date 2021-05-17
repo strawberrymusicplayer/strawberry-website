@@ -34,12 +34,15 @@ i {
   font-size: 20px;
 }
 
+.anchor {
+  padding-top: 80px;
+}
 
 /*  navbar */
 .navbar {
   background-color:hsl(4, 23%, 20%);
   border-color: hsl(350, 100%, 68%) !important;
-  box-shadow: 0 8px 6px -6px 
+  box-shadow: 0 8px 6px -6px;
 }
 
 .navbar-brand {
