@@ -126,7 +126,7 @@
           Strawberry is a music player and music collection organizer. It is aimed at music collectors and audiophiles.
           With Strawberry you can play and manage your digital music collection, or stream your favorite radios.
           Strawberry is <a href="https://www.gnu.org/philosophy/free-sw.en.html">free software</a> released under GPL. The source code is available on <a href ="https://github.com/strawberrymusicplayer/strawberry">GitHub</a>.
-          It's written in C++ using the Qt toolkit and GStreamer. Strawberry is compatible with both Qt version 5 and 6.
+          Strawberry is a fork of Clementine. It's written in C++ using the Qt toolkit and GStreamer. Strawberry is compatible with both Qt version 5 and 6.
         </p>
         <a class="anchor" id="sponsorus"></a>
         <h1>Sponsor Us</h1>
@@ -551,8 +551,6 @@
 
       <p>For Windows, see <a href="https://wiki.strawberrymusicplayer.org/wiki/MinGW_vs_MSVC">Wiki</a> for explanation of MinGW vs MSVC</p>
 
-      <p>macOS releases are for 64 bit Intel based machines. Running them on Apple Silicon might not work. There currently isn't any macOS developers working on Strawberry so there are no plans to support Apple Silicon.</p>
-
     </div>
     <div class="col darkcol p-1 p-lg-5 text-white">
       <a class="anchor" id="help"></a>
@@ -583,7 +581,7 @@
       <p>
         To add the PPA repository on Ubuntu use the following commands:<br />
         <code id="target">
-          add-apt-repository ppa:jonaski/strawberry<br />
+          sudo add-apt-repository ppa:jonaski/strawberry<br />
           sudo apt update<br />
           sudo apt install strawberry<br />
         </code>
