@@ -1,1 +1,18 @@
-sparkle-windows-msvc-x64
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+<channel>
+  <title>Strawberry</title>
+  <link>http://www.strawberrymusicplayer.org/</link>
+  <description>Strawberry Music Player</description>
+  <language>en</language>
+
+  <item>
+    <title>Strawberry 1.0.12</title>
+    <sparkle:releaseNotesLink>
+      https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/1.0.12/Changelog
+    </sparkle:releaseNotesLink>
+    <enclosure url="https://github.com/strawberrymusicplayer/strawberry/releases/download/1.0.12/StrawberrySetup-1.0.12-msvc-x64.exe" sparkle:version="1.0.12" />
+  </item>
+
+</channel>
+</rss>
