@@ -7,11 +7,11 @@
   <language>en</language>
 
   <item>
-    <title>Strawberry 1.0.13</title>
+    <title>Strawberry 1.0.14</title>
     <sparkle:releaseNotesLink>
-      https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/1.0.13/Changelog
+      https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/1.0.14/Changelog
     </sparkle:releaseNotesLink>
-    <enclosure url="https://github.com/strawberrymusicplayer/strawberry/releases/download/1.0.13/StrawberrySetup-1.0.13-msvc-x64.exe" sparkle:version="1.0.13" />
+    <enclosure url="https://github.com/strawberrymusicplayer/strawberry/releases/download/1.0.14/StrawberrySetup-1.0.14-msvc-x64.exe" sparkle:version="1.0.14" />
   </item>
 
 </channel>
