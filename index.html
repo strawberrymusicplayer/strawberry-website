@@ -101,10 +101,10 @@
               href="https://www.musixmatch.com/">Musixmatch</a>, <a href="https://www.deezer.com/">Deezer</a>, <a
               href="https://www.tidal.com/">Tidal</a> and <a
               href="https://www.spotify.com/">Spotify</a></li>
-          <li><i class="fas fa-compact-disc"></i> Song lyrics from <a href="https://www.lyrics.com/">Lyrics.com</a>, <a
+          <li><i class="fas fa-compact-disc"></i> Song lyrics from <a
               href="https://genius.com/">Genius</a>, <a href="https://www.musixmatch.com/">Musixmatch</a>, <a
-              href="http://www.chartlyrics.com/">ChartLyrics</a>, <a href="https://lyrics.ovh/">lyrics.ovh</a> and <a
-              href="https://www.lololyrics.com/">lololyrics.com</a></li>
+              href="http://www.chartlyrics.com/">ChartLyrics</a>, <a href="https://lyrics.ovh/">lyrics.ovh</a>, <a
+              href="https://www.lololyrics.com/">lololyrics.com</a>, <a href="https://www.songlyrics.com/">songlyrics.com</a>, <a href="https://www.azlyrics.com/">azlyrics.com</a>, <a href="https://www.elyrics.net/">elyrics.net</a> and <a href="https://www.lyricsmode.com/">lyricsmode.com</a></li>
           <li><i class="fas fa-compact-disc"></i> Audio analyzer</li>
           <li><i class="fas fa-compact-disc"></i> Audio equalizer</li>
           <li><i class="fas fa-compact-disc"></i> Transfer music to mass-storage USB players, MTP compatible devices and iPod Nano/Classic [*]</li>
@@ -493,7 +493,7 @@
           <h2 class="accordion-header bg-transparent" id="flush-headingEight">
             <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-              <img src="pictures/macos-32x32.png" class="accordionLogo" alt="macOS" />macOS
+              <img src="pictures/macos-32x32.png" class="accordionLogo" alt="macOS" />macOS (Login required, see more information below)
             </button>
           </h2>
           <div id="flush-collapseEight" class="accordion-collapse collapse bg-transparent"
@@ -532,7 +532,7 @@
 
       <p>Newer experimental development builds can be found for Fedora, openSUSE, Mageia, Debian, Ubuntu and Windows on <a href="https://builds.strawberrymusicplayer.org/">https://builds.strawberrymusicplayer.org/</a></p>
 
-      <p>macOS releases are currently limited to sponsors. This is because macOS releases require a developer account, Apple hardware and maintaining all libraries strawberry depends on. If you are sponsoring strawberry, e-mail support AT strawberrymusicplayer.org for access to downloads.</p>
+      <p>Access to macOS downloads requires a $5 monthly sponsorship. This is because macOS develpment require a developer account and Apple hardware. There is also lot of additional work involved maintaining the build infrastructure for all the dependencies (libraries) Strawberry depends on. If you are sponsoring strawberry, e-mail support AT strawberrymusicplayer.org for access to macOS downloads.</p>
 
       <p>For Windows, see <a href="https://wiki.strawberrymusicplayer.org/wiki/MinGW_vs_MSVC">Wiki</a> for explanation of MinGW vs MSVC</p>
 
@@ -559,11 +559,10 @@
       <a class="anchor" id="repositories"></a>
       <h1>Repositories</h1>
       <p>
-        Strawberry is available in the package repositories on most Linux distributions including Fedora, openSUSE and Arch.<br />
-        However, Strawberry is currently not available on Ubuntu. For Ubuntu and derivatives, we have an official PPA repository.
+        Strawberry is available in the package repositories on most Linux distributions including Fedora, openSUSE, Debian, Ubuntu and Arch.<br />
       </p>
       <p>
-        To add the PPA repository on Ubuntu use the following commands:<br />
+        For the newest version on Ubuntu you can use our PPA repository, add it with the following commands:<br />
         <code id="target">
           sudo add-apt-repository ppa:jonaski/strawberry<br />
           sudo apt update<br />
