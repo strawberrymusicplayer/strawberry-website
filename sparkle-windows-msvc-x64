@@ -11,7 +11,7 @@
     <sparkle:releaseNotesLink>
       https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/1.1.0/Changelog
     </sparkle:releaseNotesLink>
-    <enclosure url="https://downloads.strawberrymusicplayer.org/stable_releases/windows/msvc/StrawberrySetup-1.1.0-msvc-x64.exe" sparkle:version="1.1.0" />
+    <enclosure url="https://www.patreon.com/posts/strawberry-1-1-0-108113604" sparkle:version="1.1.0" />
   </item>
 
 </channel>
