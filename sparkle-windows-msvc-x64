@@ -7,11 +7,11 @@
   <language>en</language>
 
   <item>
-    <title>Strawberry 1.1.0</title>
+    <title>Strawberry 1.1.1</title>
     <sparkle:releaseNotesLink>
-      https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/1.1.0/Changelog
+      https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/1.1.1/Changelog
     </sparkle:releaseNotesLink>
-    <enclosure url="https://www.patreon.com/posts/strawberry-1-1-0-108113604" sparkle:version="1.1.0" />
+    <enclosure url="https://www.patreon.com/posts/strawberry-1-1-1-108632702" sparkle:version="1.1.1" />
   </item>
 
 </channel>
