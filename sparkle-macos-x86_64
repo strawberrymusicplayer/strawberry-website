@@ -9,7 +9,7 @@
             <sparkle:version>1.2.6</sparkle:version>
             <sparkle:shortVersionString>1.2.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
-            <link>https://www.patreon.com/posts/strawberry-1.2.6-120167531</link>
+            <link>https://www.patreon.com/posts/strawberry-1.2.6-120189186</link>
             <sparkle:releaseNotesLink>https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/1.2.6/Changelog</sparkle:releaseNotesLink>
         </item>
     </channel>
