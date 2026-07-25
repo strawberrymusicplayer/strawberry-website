@@ -1,6 +1,7 @@
 
 /* general */
-h1 {
+h1,
+h2:not(.accordion-header) {
   margin-top: 10px;
   font-family: 'Satisfy', cursive;
   color:hsl(350, 100%, 61%);
