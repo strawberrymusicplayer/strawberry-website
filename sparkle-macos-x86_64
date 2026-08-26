@@ -5,12 +5,12 @@
         <link>http://www.strawberrymusicplayer.org/</link>
         <description>Strawberry Music Player</description>
         <item>
-            <title>1.2.27</title>
-            <sparkle:version>1.2.27</sparkle:version>
-            <sparkle:shortVersionString>1.2.27</sparkle:shortVersionString>
+            <title>1.2.28</title>
+            <sparkle:version>1.2.28</sparkle:version>
+            <sparkle:shortVersionString>1.2.28</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
-            <link>https://www.patreon.com/posts/strawberry-1-2-166417390</link>
-            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/1.2.27/Changelog</sparkle:releaseNotesLink>
+            <link>https://www.patreon.com/posts/strawberry-1-2-167772415</link>
+            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/1.2.28/Changelog</sparkle:releaseNotesLink>
         </item>
     </channel>
 </rss>
