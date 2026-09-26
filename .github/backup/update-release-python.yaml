@@ -1,0 +1,203 @@
+name: Update release
+
+on:
+  # Temporarily disabled for manual testing.
+  #schedule:
+  #  - cron: '*/20 * * * *'
+  push:
+    branches: [ master, release ]
+  workflow_dispatch:
+    inputs:
+      draft:
+        description: 'Test run: save the Patreon post as a draft and do not commit'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-release
+  cancel-in-progress: false
+
+env:
+  UPSTREAM_REPO: strawberrymusicplayer/strawberry
+
+jobs:
+  update-release:
+    name: Update release
+    if: github.repository == 'strawberrymusicplayer/strawberry-website' && (github.ref_name == 'master' || github.ref_name == 'release')
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Check for new release
+        id: check
+        env:
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        run: |
+          current_version=$(grep -oP 'Current version: \K[0-9.]+' index.html)
+          release=$(gh release view -R "${UPSTREAM_REPO}" --json tagName,publishedAt,isDraft,isPrerelease)
+          new_version=$(echo "${release}" | jq -r .tagName)
+          echo "Current version: ${current_version}, latest release: ${new_version}"
+
+          if [ "$(echo "${release}" | jq -r '.isDraft or .isPrerelease')" = "true" ]; then
+            echo "Latest release ${new_version} is a draft or prerelease, skipping."
+            exit 0
+          fi
+
+          if [ "${new_version}" = "${current_version}" ] || [ "$(printf '%s\n%s\n' "${current_version}" "${new_version}" | sort -V | tail -n1)" != "${new_version}" ]; then
+            echo "No new release."
+            exit 0
+          fi
+          if ! echo "${new_version}" | grep -qP '^\d+\.\d+\.\d+$'; then
+            echo "::warning::Unexpected release tag ${new_version}, skipping."
+            exit 0
+          fi
+
+          run=$(gh run list -R "${UPSTREAM_REPO}" --workflow build.yaml --event release --branch "${new_version}" -L 1 --json databaseId,status,conclusion -q '.[0]')
+          if [ -z "${run}" ]; then
+            echo "No release build found for ${new_version} yet."
+            exit 0
+          fi
+          status=$(echo "${run}" | jq -r .status)
+          conclusion=$(echo "${run}" | jq -r .conclusion)
+          echo "Release build $(echo "${run}" | jq -r .databaseId): ${status} ${conclusion}"
+          if [ "${status}" != "completed" ]; then
+            echo "Release build is not finished yet."
+            exit 0
+          fi
+          if [ "${conclusion}" != "success" ]; then
+            echo "::warning::Release build for ${new_version} finished with ${conclusion}, not updating."
+            exit 0
+          fi
+
+          old_patreon_urls=$(grep -oP 'https://www\.patreon\.com/posts/[a-z0-9-]+' index.html | sort -u || true)
+          if [ -z "${old_patreon_urls}" ]; then
+            echo "::error::Found no Patreon post URL in index.html."
+            exit 1
+          fi
+          if [ "$(printf '%s' "${old_patreon_urls}" | grep -c .)" != "1" ]; then
+            echo "::error::Expected exactly one Patreon post URL in index.html, found: ${old_patreon_urls}"
+            exit 1
+          fi
+
+          echo "update=true" >> $GITHUB_OUTPUT
+          echo "old_version=${current_version}" >> $GITHUB_OUTPUT
+          echo "new_version=${new_version}" >> $GITHUB_OUTPUT
+          echo "release_date=$(TZ=Europe/Oslo date -d "$(echo "${release}" | jq -r .publishedAt)" +%Y.%m.%d)" >> $GITHUB_OUTPUT
+          echo "old_patreon_url=${old_patreon_urls}" >> $GITHUB_OUTPUT
+
+      - name: Update version
+        if: steps.check.outputs.update == 'true'
+        env:
+          OLD_VERSION: ${{steps.check.outputs.old_version}}
+          NEW_VERSION: ${{steps.check.outputs.new_version}}
+          RELEASE_DATE: ${{steps.check.outputs.release_date}}
+        run: |
+          # Only regular files, sed -i would replace the sparkle-macos and sparkle-windows symlinks.
+          files="index.html $(find . -maxdepth 1 -type f -name 'sparkle-*' -printf '%f ')"
+          perl -pi -e 's/(?<![\d.])\Q$ENV{OLD_VERSION}\E(?!\.?\d)/$ENV{NEW_VERSION}/g' ${files}
+          sed -i -E "s|(Release date: )[0-9.]+|\1${RELEASE_DATE}|" index.html
+          git diff --stat
+
+      - name: Verify download links
+        if: steps.check.outputs.update == 'true'
+        run: |
+          failed=0
+          for url in $(grep -oP 'https://files\.strawberrymusicplayer\.org/[^"]+' index.html); do
+            if curl -fsSIL -o /dev/null --retry 3 "${url}"; then
+              echo "OK: ${url}"
+            else
+              echo "::error::Download link not available: ${url}"
+              failed=1
+            fi
+          done
+          exit ${failed}
+
+      - name: SSH Setup
+        if: steps.check.outputs.update == 'true'
+        uses: shimataro/ssh-key-action@87a8f067114a8ce263df83e9ed5c849953548bc3 # v2.8.1
+        with:
+          known_hosts: ${{secrets.SSH_KNOWN_HOSTS}}
+          key: ${{secrets.SSH_KEY}}
+
+      - name: Download release files
+        if: steps.check.outputs.update == 'true'
+        env:
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          VERSION: ${{steps.check.outputs.new_version}}
+          SSH_HOST: ${{secrets.SSH_HOST}}
+          SSH_PORT: ${{secrets.SSH_PORT}}
+          SSH_USER: ${{secrets.SSH_USER}}
+          DOWNLOADS_PATH: ${{secrets.DOWNLOADS_PATH}}
+        run: |
+          mkdir -p release
+          gh release download "${VERSION}" -R "${UPSTREAM_REPO}" -p "strawberry-${VERSION}.tar.xz" -D release
+          gh release view "${VERSION}" -R "${UPSTREAM_REPO}" --json body -q .body > release-notes.md
+          cat release-notes.md
+          for file in \
+            linux/appimage/Strawberry-${VERSION}-Linux-x86_64.AppImage \
+            macos/strawberry-${VERSION}-arm64.dmg \
+            macos/strawberry-${VERSION}-x86_64.dmg \
+            windows/mingw/StrawberrySetup-${VERSION}-mingw-x64.exe \
+            windows/msvc/StrawberrySetup-${VERSION}-msvc-arm64.exe \
+            windows/msvc/StrawberrySetup-${VERSION}-msvc-x64.exe
+          do
+            scp -P "${SSH_PORT}" "${SSH_USER}@${SSH_HOST}:${DOWNLOADS_PATH}/stable_releases/${file}" release/
+          done
+          ls -l release
+
+      - name: Install Python packages
+        if: steps.check.outputs.update == 'true'
+        run: pip install requests
+
+      - name: Post to Patreon
+        id: patreon
+        if: steps.check.outputs.update == 'true'
+        env:
+          PATREON_COOKIE: ${{secrets.PATREON_COOKIE}}
+          OLD_VERSION: ${{steps.check.outputs.old_version}}
+          NEW_VERSION: ${{steps.check.outputs.new_version}}
+          OLD_PATREON_URL: ${{steps.check.outputs.old_patreon_url}}
+          DRAFT: ${{inputs.draft && '--draft' || ''}}
+        run: |
+          # The script gives up and cleans up after 90 minutes, before the job timeout cancels it.
+          url=$(python3 .github/scripts/patreon-post.py ${DRAFT} --timeout-minutes 90 --previous-url "${OLD_PATREON_URL}" --old-version "${OLD_VERSION}" --new-version "${NEW_VERSION}" --price-cents 2500 --release-notes release-notes.md --release-url "https://github.com/${UPSTREAM_REPO}/releases/tag/${NEW_VERSION}" \
+            release/strawberry-${NEW_VERSION}-arm64.dmg \
+            release/Strawberry-${NEW_VERSION}-Linux-x86_64.AppImage \
+            release/strawberry-${NEW_VERSION}-x86_64.dmg \
+            release/strawberry-${NEW_VERSION}.tar.xz \
+            release/StrawberrySetup-${NEW_VERSION}-mingw-x64.exe \
+            release/StrawberrySetup-${NEW_VERSION}-msvc-arm64.exe \
+            release/StrawberrySetup-${NEW_VERSION}-msvc-x64.exe)
+          echo "Patreon post: ${url}"
+          if ! echo "${url}" | grep -qP '^https://www\.patreon\.com/posts/[a-z0-9-]+$'; then
+            echo "::error::Unexpected Patreon post URL: ${url}"
+            exit 1
+          fi
+          echo "url=${url}" >> $GITHUB_OUTPUT
+
+      - name: Update Patreon links
+        if: steps.check.outputs.update == 'true'
+        env:
+          OLD_PATREON_URL: ${{steps.check.outputs.old_patreon_url}}
+          NEW_PATREON_URL: ${{steps.patreon.outputs.url}}
+        run: |
+          files="index.html $(find . -maxdepth 1 -type f -name 'sparkle-*' -printf '%f ')"
+          sed -i "s|${OLD_PATREON_URL}|${NEW_PATREON_URL}|g" ${files}
+          git diff
+
+      - name: Commit and push
+        if: steps.check.outputs.update == 'true' && !inputs.draft
+        env:
+          NEW_VERSION: ${{steps.check.outputs.new_version}}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html sparkle-*
+          git commit -m "Update to version ${NEW_VERSION}"
+          git push
