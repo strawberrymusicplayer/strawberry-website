@@ -72,6 +72,10 @@ class Patreon:
     results = []
     for path in ('/home', '/membership'):
       r = self.session.get(BASE_URL + path, headers={'Accept': 'text/html'}, timeout=self.timeout(REQUEST_TIMEOUT))
+      # A logged out session ends at the login page, which has a CSRF token too.
+      if '/login' in urllib.parse.urlparse(r.url).path:
+        results.append(login_result(path, r.status_code, r.url, r.text, r.headers))
+        continue
       for pattern in (r'<meta name="csrf-token" content="([^"]+)"', r'"csrfSignature"\s*:\s*"([^"]+)"'):
         m = re.search(pattern, r.text)
         if m:

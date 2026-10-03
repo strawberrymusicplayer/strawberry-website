@@ -125,7 +125,9 @@ jobs:
           known_hosts: ${{secrets.SSH_KNOWN_HOSTS}}
           key: ${{secrets.SSH_KEY}}
 
-      - name: Download release files
+      # Patreon's Cloudflare blocks GitHub's runners, so the post is made from the downloads server, which already has the other release files.
+      - name: Prepare Patreon post on server
+        id: prepare
         if: steps.check.outputs.update == 'true'
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -133,23 +135,14 @@ jobs:
           SSH_HOST: ${{secrets.SSH_HOST}}
           SSH_PORT: ${{secrets.SSH_PORT}}
           SSH_USER: ${{secrets.SSH_USER}}
-          DOWNLOADS_PATH: ${{secrets.DOWNLOADS_PATH}}
         run: |
           mkdir -p release
           gh release download "${VERSION}" -R "${UPSTREAM_REPO}" -p "strawberry-${VERSION}.tar.xz" -D release
           gh release view "${VERSION}" -R "${UPSTREAM_REPO}" --json body -q .body > release-notes.md
           cat release-notes.md
-          for file in \
-            linux/appimage/Strawberry-${VERSION}-Linux-x86_64.AppImage \
-            macos/strawberry-${VERSION}-arm64.dmg \
-            macos/strawberry-${VERSION}-x86_64.dmg \
-            windows/mingw/StrawberrySetup-${VERSION}-mingw-x64.exe \
-            windows/msvc/StrawberrySetup-${VERSION}-msvc-arm64.exe \
-            windows/msvc/StrawberrySetup-${VERSION}-msvc-x64.exe
-          do
-            scp -P "${SSH_PORT}" "${SSH_USER}@${SSH_HOST}:${DOWNLOADS_PATH}/stable_releases/${file}" release/
-          done
-          ls -l release
+          workdir=$(ssh -p "${SSH_PORT}" "${SSH_USER}@${SSH_HOST}" 'mktemp -d')
+          echo "workdir=${workdir}" >> $GITHUB_OUTPUT
+          scp -P "${SSH_PORT}" .github/scripts/patreon-post.mjs release-notes.md "release/strawberry-${VERSION}.tar.xz" "${SSH_USER}@${SSH_HOST}:${workdir}/"
 
       - name: Post to Patreon
         id: patreon
@@ -160,23 +153,46 @@ jobs:
           NEW_VERSION: ${{steps.check.outputs.new_version}}
           OLD_PATREON_URL: ${{steps.check.outputs.old_patreon_url}}
           DRAFT: ${{inputs.draft && '--draft' || ''}}
+          SSH_HOST: ${{secrets.SSH_HOST}}
+          SSH_PORT: ${{secrets.SSH_PORT}}
+          SSH_USER: ${{secrets.SSH_USER}}
+          DOWNLOADS_PATH: ${{secrets.DOWNLOADS_PATH}}
+          WORKDIR: ${{steps.prepare.outputs.workdir}}
         run: |
+          files="${DOWNLOADS_PATH}/stable_releases"
           # The script gives up and cleans up after 90 minutes, before the job timeout cancels it.
-          url=$(node .github/scripts/patreon-post.mjs ${DRAFT} --timeout-minutes 90 --previous-url "${OLD_PATREON_URL}" --old-version "${OLD_VERSION}" --new-version "${NEW_VERSION}" --price-cents 2500 --release-notes release-notes.md --release-url "https://github.com/${UPSTREAM_REPO}/releases/tag/${NEW_VERSION}" \
-            release/strawberry-${NEW_VERSION}.tar.xz \
-            release/Strawberry-${NEW_VERSION}-Linux-x86_64.AppImage \
-            release/strawberry-${NEW_VERSION}-x86_64.dmg \
-            release/strawberry-${NEW_VERSION}-arm64.dmg \
-            release/StrawberrySetup-${NEW_VERSION}-mingw-x64.exe \
-            release/StrawberrySetup-${NEW_VERSION}-msvc-x64.exe \
-            release/StrawberrySetup-${NEW_VERSION}-msvc-arm64.exe \
+          command=$(printf '%q ' node "${WORKDIR}/patreon-post.mjs" ${DRAFT} --timeout-minutes 90 --previous-url "${OLD_PATREON_URL}" --old-version "${OLD_VERSION}" --new-version "${NEW_VERSION}" --price-cents 2500 --release-notes "${WORKDIR}/release-notes.md" --release-url "https://github.com/${UPSTREAM_REPO}/releases/tag/${NEW_VERSION}" \
+            "${WORKDIR}/strawberry-${NEW_VERSION}.tar.xz" \
+            "${files}/linux/appimage/Strawberry-${NEW_VERSION}-Linux-x86_64.AppImage" \
+            "${files}/macos/strawberry-${NEW_VERSION}-x86_64.dmg" \
+            "${files}/macos/strawberry-${NEW_VERSION}-arm64.dmg" \
+            "${files}/windows/mingw/StrawberrySetup-${NEW_VERSION}-mingw-x64.exe" \
+            "${files}/windows/msvc/StrawberrySetup-${NEW_VERSION}-msvc-x64.exe" \
+            "${files}/windows/msvc/StrawberrySetup-${NEW_VERSION}-msvc-arm64.exe" \
           )
+          # The cookie goes through stdin, so it's not on the command line on the server.
+          url=$(printf '%s' "${PATREON_COOKIE}" | ssh -o ServerAliveInterval=60 -p "${SSH_PORT}" "${SSH_USER}@${SSH_HOST}" "PATREON_COOKIE=\"\$(cat)\" exec ${command}")
           echo "Patreon post: ${url}"
           if ! echo "${url}" | grep -qP '^https://www\.patreon\.com/posts/[a-z0-9-]+$'; then
             echo "::error::Unexpected Patreon post URL: ${url}"
             exit 1
           fi
           echo "url=${url}" >> $GITHUB_OUTPUT
+
+      - name: Clean up on server
+        if: always() && steps.prepare.outputs.workdir != ''
+        # A failed cleanup must not stop the website update.
+        continue-on-error: true
+        env:
+          SSH_HOST: ${{secrets.SSH_HOST}}
+          SSH_PORT: ${{secrets.SSH_PORT}}
+          SSH_USER: ${{secrets.SSH_USER}}
+          WORKDIR: ${{steps.prepare.outputs.workdir}}
+        run: |
+          case "${WORKDIR}" in
+            /tmp/tmp.*) ssh -p "${SSH_PORT}" "${SSH_USER}@${SSH_HOST}" "rm -rf $(printf '%q' "${WORKDIR}")" ;;
+            *) echo "::warning::Not removing unexpected directory ${WORKDIR} on server." ;;
+          esac
 
       - name: Update Patreon links
         if: steps.check.outputs.update == 'true'
