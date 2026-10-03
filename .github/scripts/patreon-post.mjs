@@ -91,6 +91,11 @@ class Patreon {
     for (const urlPath of ['/home', '/membership']) {
       const r = await fetch(BASE_URL + urlPath, { headers: { ...this.headers, 'Accept': 'text/html' }, signal: this.timeout(REQUEST_TIMEOUT) });
       const text = await r.text();
+      // A logged out session ends at the login page, which has a CSRF token too.
+      if (new URL(r.url).pathname.includes('/login')) {
+        results.push(loginResult(urlPath, r.status, r.url, text, r.headers));
+        continue;
+      }
       for (const pattern of [/<meta name="csrf-token" content="([^"]+)"/, /"csrfSignature"\s*:\s*"([^"]+)"/]) {
         const m = text.match(pattern);
         if (m) {
