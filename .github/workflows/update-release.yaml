@@ -1,9 +1,8 @@
 name: Update release
 
 on:
-  # Temporarily disabled for manual testing.
-  #schedule:
-  #  - cron: '*/20 * * * *'
+  schedule:
+    - cron: '*/20 * * * *'
   push:
     branches: [ master, release ]
   workflow_dispatch:
