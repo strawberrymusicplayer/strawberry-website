@@ -134,7 +134,7 @@ class Patreon:
 
   def create_post(self):
     # Created from the shop as a product.
-    data = {'data': {'type': 'post', 'attributes': {'purchase_only': True}}}
+    data = {'data': {'type': 'post', 'attributes': {'post_type': 'text_only', 'purchase_only': True}}}
     return self.request('POST', f'/api/posts?fields[post]=post_type,post_metadata&include=drop&{API_QUERY}', json=data)
 
   def delete_post(self, post_id):

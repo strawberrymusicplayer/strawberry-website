@@ -180,7 +180,7 @@ class Patreon {
 
   createPost() {
     // Created from the shop as a product.
-    const data = { data: { type: 'post', attributes: { purchase_only: true } } };
+    const data = { data: { type: 'post', attributes: { post_type: 'text_only', purchase_only: true } } };
     return this.request('POST', `/api/posts?fields[post]=post_type,post_metadata&include=drop&${API_QUERY}`, { json: data });
   }
 
