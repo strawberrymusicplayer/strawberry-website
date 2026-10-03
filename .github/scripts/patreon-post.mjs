@@ -237,6 +237,16 @@ class Patreon {
     await this.request('PATCH', `/api/posts/${postId}?include=[]&${API_QUERY}`, { json: data });
   }
 
+  async getFeaturedPostId(campaignId) {
+    const campaign = await this.request('GET', `/api/campaigns/${campaignId}?include=featured_post&fields[campaign]=name&fields[post]=title&${API_QUERY}`);
+    return campaign.data.relationships?.featured_post?.data?.id ?? null;
+  }
+
+  // Pin the post on the creator page. A campaign has one featured post, so this also unpins the previous one.
+  async setFeaturedPost(campaignId, postId) {
+    await this.request('POST', `/api/campaigns/${campaignId}/featured-post?${API_QUERY}`, { json: { data: { attributes: { featured_post_id: postId }, relationships: {} } } });
+  }
+
   async getPostPriceCents(postId) {
     const post = await this.request('GET', `/api/posts/${postId}?include=content_unlock_options.product_variant.null&fields[post]=is_monetized,paywall_display&fields[content-unlock-option]=content_unlock_type&fields[product-variant]=price_cents,currency_code&${API_QUERY}`);
     for (const item of post.included || []) {
@@ -586,6 +596,7 @@ async function main() {
     const existing = await patreon.findPostByTitle(campaignId, title, previous.data.attributes.published_at);
     if (existing) {
       log(`Post "${title}" already exists, not creating a new one.`);
+      await pinPost(patreon, campaignId, existing.id);
       console.log(postUrl(existing));
       return;
     }
@@ -662,7 +673,29 @@ async function main() {
     throw new Error(`Post ${newPostId} was created but is not published.`);
   }
   log(`${args.draft ? 'Saved draft' : 'Published'} "${post.attributes.title}"`);
+  if (!args.draft) {
+    await pinPost(patreon, campaignId, newPostId);
+  }
   console.log(postUrl(post));
+}
+
+// A failed pin only warns, the post is already published and the website still needs the update.
+async function pinPost(patreon, campaignId, postId) {
+  try {
+    if (await patreon.getFeaturedPostId(campaignId) === postId) {
+      log(`Post ${postId} is already pinned`);
+      return;
+    }
+    await patreon.setFeaturedPost(campaignId, postId);
+    const featuredPostId = await patreon.getFeaturedPostId(campaignId);
+    if (featuredPostId !== postId) {
+      throw new Error(`the pinned post is ${featuredPostId}`);
+    }
+    log(`Pinned post ${postId}`);
+  }
+  catch (e) {
+    log(`Warning: Could not pin post ${postId}, pin it by hand: ${e.message}`);
+  }
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
